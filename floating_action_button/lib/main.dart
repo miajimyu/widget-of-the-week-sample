@@ -13,6 +13,8 @@ class MyApp extends StatelessWidget {
         '/fab2': (BuildContext context) => FAB2(),
         '/fab3': (BuildContext context) => FAB3(),
         '/fab4': (BuildContext context) => FAB4(),
+        '/sample1': (BuildContext context) => Sample1(),
+        '/sample2': (BuildContext context) => Sample2(),
       },
     );
   }
@@ -31,6 +33,8 @@ class MyHomePage extends StatelessWidget {
           _buildList(context, 'Just use a BottomAppBar', '/fab2'),
           _buildList(context, 'Set the location (endDocked)', '/fab3'),
           _buildList(context, 'Set the location (centerDocked)', '/fab4'),
+          _buildList(context, 'Sample1', '/sample1'),
+          _buildList(context, 'Sample2', '/sample2'),
         ],
       ),
     );
@@ -107,6 +111,47 @@ class FAB4 extends StatelessWidget {
         child: Container(height: 50.0),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+    );
+  }
+}
+
+class Sample1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Floating Action Button Sample'),
+      ),
+      body: Center(child: Text('Press the button below!')),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add your onPressed code here!
+        },
+        child: Icon(Icons.thumb_up),
+        backgroundColor: Colors.pink,
+      ),
+    );
+  }
+}
+
+class Sample2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Floating Action Button Sample'),
+      ),
+      body: Center(
+        child: Text('Press the extended button below!'),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          // Add your onPressed code here!
+        },
+        label: Text('Approve'),
+        icon: Icon(Icons.thumb_up),
+        backgroundColor: Colors.pink,
+      ),
     );
   }
 }
