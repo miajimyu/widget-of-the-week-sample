@@ -4,7 +4,7 @@
 
 ## Screenshots
 
-Menu
+Menu  
 <img src="./screenshots/Menu.png" height="400" alt="Screenshot"/>
 
 |Height|Color|
