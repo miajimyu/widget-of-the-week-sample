@@ -8,4 +8,4 @@
 
 |Menu|Sample|
 |-|-|
-|<img src="./screenshots/Menu.png" height="400" alt="Screenshot"/>|<img src="./screenshots/movie/Sample.gif" height="400" alt="Screenshot"/>|
+|<img src="./screenshots/Menu.png" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/Sample.gif" height="400" alt="Screenshot"/>|

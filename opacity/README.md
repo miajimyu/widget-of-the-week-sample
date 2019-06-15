@@ -17,4 +17,4 @@ Menu
 
 |Blending Stacks|AnimatedOpacity|Samples|
 |-|-|-|
-|<img src="./screenshots/BlendingStacks.png" height="400" alt="Screenshot"/>|<img src="./screenshots/movie/AnimatedOpacity.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/movie/Samples.gif" height="400" alt="Screenshot"/>|
+|<img src="./screenshots/BlendingStacks.png" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/AnimatedOpacity.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/Samples.gif" height="400" alt="Screenshot"/>|
