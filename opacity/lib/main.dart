@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
         '/opaticy': (BuildContext context) => OpacityPage(),
         '/blending': (BuildContext context) => BlendingStacksPage(),
         '/animatedopacity': (BuildContext context) => AnimatedOpacityPage(),
+        '/samples': (BuildContext context) => SamplesPage(),
       },
     );
   }
@@ -32,6 +33,7 @@ class MyHomePage extends StatelessWidget {
             _buildList(context, 'Opacity', '/opaticy'),
             _buildList(context, 'Blending Stacks', '/blending'),
             _buildList(context, 'Animated Opacity', '/animatedopacity'),
+            _buildList(context, 'Samples', '/samples'),
           ],
         ),
       ),
@@ -219,5 +221,51 @@ class _AnimatedOpacityPageState extends State<AnimatedOpacityPage> {
         ),
       ),
     );
+  }
+}
+
+class SamplesPage extends StatefulWidget {
+  @override
+  _SamplesPageState createState() => _SamplesPageState();
+}
+
+class _SamplesPageState extends State<SamplesPage> {
+  var _visible = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Samples'),
+      ),
+      body: Column(
+        children: <Widget>[
+          _buildSample1(_visible),
+          _buildSample2(),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            _visible = !_visible;
+          });
+        },
+        child: Icon(Icons.sync),
+      ),
+    );
+  }
+
+  Widget _buildSample1(bool _visible) {
+    return Opacity(
+      opacity: _visible ? 1.0 : 0.0,
+      child: const Text('Now you see me, now you don\'t!'),
+    );
+  }
+
+  Widget _buildSample2() {
+    return Image.network(
+        'https://raw.githubusercontent.com/flutter/assets-for-api-docs/master/packages/diagrams/assets/blend_mode_destination.jpeg',
+        color: Color.fromRGBO(255, 255, 255, 0.5),
+        colorBlendMode: BlendMode.modulate);
   }
 }
