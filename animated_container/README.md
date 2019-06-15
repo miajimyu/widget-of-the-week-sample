@@ -5,12 +5,12 @@
 ## Screenshots
 
 Menu
-![Menu](screenshots/Menu.png)
+<img src="./screenshots/Menu.png" height="400" alt="Screenshot"/>
 
 |Height|Color|
 |-|-|
-|![Height](screenshots/gif/Height.gif)|![Color](screenshots/gif/Color.gif)|
+|<img src="./screenshots/gif/Height.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/Color.gif" height="400" alt="Screenshot"/>|
 
 |Border|BorderRadii|
 |-|-|
-|![Border](screenshots/gif/Border.gif)|![BorderRadii](screenshots/gif/BorderRadii.gif)|
+|<img src="./screenshots/gif/Border.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/BorderRadii.gif" height="400" alt="Screenshot"/>|
