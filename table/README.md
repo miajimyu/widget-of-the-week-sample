@@ -6,9 +6,9 @@
 
 ## Screenshots
 
-|Menu|Alignment(Middle)|Alignment(Bottom)|
-|-|-|-|
-|<img src="./screenshots/Menu.png" height="400" alt="Screenshot"/>|<img src="./screenshots/AlignmentMiddle.png" height="400" alt="Screenshot"/>|<img src="./screenshots/AlignmentBottom.png" height="400" alt="Screenshot"/>|
+|Menu|Table|Alignment(Middle)|Alignment(Bottom)|
+|-|-|-|-|
+|<img src="./screenshots/Menu.png" height="400" alt="Screenshot"/>|<img src="./screenshots/Table.png" height="400" alt="Screenshot"/>|<img src="./screenshots/AlignmentMiddle.png" height="400" alt="Screenshot"/>|<img src="./screenshots/AlignmentBottom.png" height="400" alt="Screenshot"/>|
 
 |FlexColumnWidth|FractionColumnWidth|FixedColumnWidth|
 |-|-|-|
