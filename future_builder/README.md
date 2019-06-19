@@ -2,7 +2,7 @@
 
 ## Docs
 
-[FutureBuilder<T> class](https://api.flutter.dev/flutter/widgets/FutureBuilder-class.html)
+[FutureBuilder\<T\> class](https://api.flutter.dev/flutter/widgets/FutureBuilder-class.html)
 
 ## Screenshots
 
