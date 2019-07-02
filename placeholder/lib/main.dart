@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'pages/sample1.dart';
+import 'pages/sample2.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (BuildContext context) => MyHomePage(),
         '/sample1': (BuildContext context) => Sample1Page(),
+        '/sample2': (BuildContext context) => Sample2Page(),
       },
     );
   }
@@ -28,6 +30,7 @@ class MyHomePage extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             _buildList(context, 'Sample1', '/sample1'),
+            _buildList(context, 'Sample2', '/sample2'),
           ],
         ),
       ),
