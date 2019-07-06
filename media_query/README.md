@@ -11,6 +11,6 @@
 |<img src="./screenshots/Menu.png" height="400" alt="Screenshot"/>|<img src="./screenshots/Sample1-1.png" height="400" alt="Screenshot"/>|<img src="./screenshots/Sample1-2.png" width="400" alt="Screenshot"/>|
 
 
-|Sample1-2|
+|Sample2|
 |:-:|
 |<img src="./screenshots/Sample2.png" height="400" alt="Screenshot"/>|
