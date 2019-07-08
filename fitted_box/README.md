@@ -9,3 +9,8 @@
 |Menu|Sample1 (BoxFit)|Sample2 (Alignment)|
 |:-:|:-:|:-:|
 |<img src="./screenshots/Menu.png" height="400" alt="Screenshot"/>|<img src="./screenshots/Sample1.png" height="400" alt="Screenshot"/>|<img src="./screenshots/Sample2.png" height="400" alt="Screenshot"/>|
+
+
+|Sample3 (Text)|
+|:-:|
+<img src="./screenshots/Sample3.png" height="400" alt="Screenshot"/>|
