@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'pages/sample1.dart';
+import 'pages/sample2.dart';
+import 'pages/sample3.dart';
+import 'pages/sample4.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -9,8 +14,10 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (BuildContext context) => MyHomePage(),
-        '/pageview': (BuildContext context) => PageViewPage(),
-        '/pageviewvertical': (BuildContext context) => VerticalPageViewPage(),
+        '/sample1': (BuildContext context) => Sample1Page(),
+        '/sample2': (BuildContext context) => Sample2Page(),
+        '/sample3': (BuildContext context) => Sample3Page(),
+        '/sample4': (BuildContext context) => Sample4Page(),
       },
     );
   }
@@ -26,8 +33,11 @@ class MyHomePage extends StatelessWidget {
       body: SafeArea(
         child: ListView(
           children: <Widget>[
-            _buildList(context, 'PageView', '/pageview'),
-            _buildList(context, 'PageView Vertical', '/pageviewvertical'),
+            _buildList(context, 'Sample1', '/sample1'),
+            _buildList(
+                context, 'Sample2 (scrollDirection = vertical)', '/sample2'),
+            _buildList(context, 'Sample3 (reverse = true)', '/sample3'),
+            _buildList(context, 'Sample4 (pageSnapping = false)', '/sample4'),
           ],
         ),
       ),
@@ -43,80 +53,6 @@ class MyHomePage extends StatelessWidget {
         },
         trailing: Icon(Icons.chevron_right),
       ),
-    );
-  }
-}
-
-class PageViewPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final controller = PageController(
-      initialPage: 1,
-    );
-    final pageView = PageView(
-      controller: controller,
-      children: <Widget>[
-        MyPage1Widget(),
-        MyPage2Widget(),
-        MyPage3Widget(),
-      ],
-    );
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('PageView'),
-      ),
-      body: pageView,
-    );
-  }
-}
-
-class VerticalPageViewPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final controller = PageController(
-      initialPage: 1,
-    );
-    final pageView = PageView(
-      controller: controller,
-      scrollDirection: Axis.vertical,
-      children: <Widget>[
-        MyPage1Widget(),
-        MyPage2Widget(),
-        MyPage3Widget(),
-      ],
-    );
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('PageView Vertical'),
-      ),
-      body: pageView,
-    );
-  }
-}
-
-class MyPage1Widget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('page 1'),
-    );
-  }
-}
-
-class MyPage2Widget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('page 2'),
-    );
-  }
-}
-
-class MyPage3Widget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('page 3'),
     );
   }
 }

@@ -1,9 +1,14 @@
-Param( [string]$fileName )
+Set-Location (Split-Path $script:myInvocation.MyCommand.path -parent)
 
-ffmpeg -i $fileName -an -r 10 %04d.png
-convert *.png -resize 40% output_%04d.png
+$files = Get-ChildItem *.mov
 
-$file = Get-ChildItem $fileName
-convert output_*.png "$($file.BaseName).gif"
+foreach ($file in $files) {
+  ffmpeg -i $file.name -an -r 10 %04d.png
+  convert *.png -resize 40% output_%04d.png
+  convert output_*.png "$($file.BaseName).gif"
+  Remove-Item *.png
+}
 
-Remove-Item *.png
+Remove-Item $files
+
+Pop-Location

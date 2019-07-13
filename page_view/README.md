@@ -8,6 +8,10 @@
 
 ## Screenshots
 
-|Menu|PageView|PageView Vertical|
-|-|-|-|
-|<img src="./screenshots/Menu.png" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/PageView.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/PageViewVertical.gif" height="400" alt="Screenshot"/>|
+|Menu|Sample1|Sample2 (scrollDirection = vertical)|
+|:-:|:-:|:-:|
+|<img src="./screenshots/Menu.png" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/Sample1.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/Sample2.gif" height="400" alt="Screenshot"/>|
+
+|Sample3 (reverse = true)|Sample4 (pageSnapping = false)|
+|:-:|:-:|
+|<img src="./screenshots/gif/Sample3.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/Sample4.gif" height="400" alt="Screenshot"/>|
