@@ -19,7 +19,6 @@ class Sample2Page extends StatelessWidget {
           readOnly: true,
         ),
       ),
-      // body: FlutterLogo(),
     );
   }
 }

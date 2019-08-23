@@ -17,7 +17,6 @@ class Sample1Page extends StatelessWidget {
         enabled: true,
         readOnly: true,
       ),
-      // body: FlutterLogo(),
     );
   }
 }

@@ -34,7 +34,6 @@ class _Sample3PageState extends State<Sample3Page> {
           ],
         ),
       ),
-      // body: FlutterLogo(),
     );
   }
 }
