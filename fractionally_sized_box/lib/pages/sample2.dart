@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Sample2Page extends StatefulWidget {
-  @override
-  _Sample2PageState createState() => _Sample2PageState();
-}
-
-class _Sample2PageState extends State<Sample2Page> {
+class Sample2Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
