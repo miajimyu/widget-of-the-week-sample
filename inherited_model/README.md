@@ -8,6 +8,6 @@
 
 # Screenshots
 
-|Menu|InheritedWidget|InheritedModel|
-|-|-|-|
-|<img src="./screenshots/Menu.png" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/InheritedWidget.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/InheritedModel.gif" height="400" alt="Screenshot"/>|
+|InheritedWidget|InheritedModel|
+|:-:|:-:|
+|<img src="./screenshots/gif/InheritedWidget.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/InheritedModel.gif" height="400" alt="Screenshot"/>|
