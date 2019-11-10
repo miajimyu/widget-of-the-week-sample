@@ -1,8 +1,10 @@
-import 'package:animated_container/pages/border.dart';
-import 'package:animated_container/pages/border_raddii.dart';
-import 'package:animated_container/pages/color.dart';
-import 'package:animated_container/pages/height.dart';
 import 'package:flutter/material.dart';
+
+import 'pages/border.dart';
+import 'pages/border_raddii.dart';
+import 'pages/color.dart';
+import 'pages/height.dart';
+import 'pages/sine_curve.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,6 +19,7 @@ class MyApp extends StatelessWidget {
         '/color': (BuildContext context) => AnimateColorPage(),
         '/border': (BuildContext context) => AnimateBorderPage(),
         '/borderradii': (BuildContext context) => AnimateBorderRadiiPage(),
+        '/sine_curve': (BuildContext context) => SineCurveAnimation(),
       },
     );
   }
@@ -36,6 +39,7 @@ class MyHomePage extends StatelessWidget {
             _buildList(context, 'Color', '/color'),
             _buildList(context, 'Border', '/border'),
             _buildList(context, 'Border Radii', '/borderradii'),
+            _buildList(context, 'Sine Curve', '/sine_curve'),
           ],
         ),
       ),
