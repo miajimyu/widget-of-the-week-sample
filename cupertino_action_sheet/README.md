@@ -9,5 +9,5 @@
 ## Screenshots
 
 |[Sample1](./lib/pages/sample1.dart)|
-|:-:|:-
+|:-:|
 |<img src="./screenshots/Sample1.png" height="400" alt="Screenshot"/>|
