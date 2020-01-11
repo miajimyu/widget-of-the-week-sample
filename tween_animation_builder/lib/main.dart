@@ -4,6 +4,7 @@ import 'pages/sample1.dart';
 import 'pages/sample2.dart';
 import 'pages/sample3.dart';
 import 'pages/sample4.dart';
+import 'pages/class_sample1.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         '/sample2': (BuildContext context) => Sample2Page(),
         '/sample3': (BuildContext context) => Sample3Page(),
         '/sample4': (BuildContext context) => Sample4Page(),
+        '/class_sample1': (BuildContext context) => ClassSample1Page(),
       },
     );
   }
@@ -37,6 +39,7 @@ class HomePage extends StatelessWidget {
             _buildList(context, 'Sample2', '/sample2'),
             _buildList(context, 'Sample3', '/sample3'),
             _buildList(context, 'Sample4', '/sample4'),
+            _buildList(context, 'Class Sample1', '/class_sample1'),
           ],
         ),
       ),
