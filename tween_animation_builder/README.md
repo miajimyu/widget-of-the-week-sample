@@ -12,4 +12,4 @@
 
 |[Sample4](./lib/pages/sample4.dart)|[ClassSample1](./lib/pages/class_sample1.dart)|
 |:-:|:-:|
-|<img src="./screenshots/Sample4.png" height="300" alt="Screenshot"/>|<img src="./screenshots/gif/ClassSample1.gif" height="400" alt="Screenshot"/>|
+|<img src="./screenshots/Sample4.png" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/ClassSample1.gif" height="400" alt="Screenshot"/>|
