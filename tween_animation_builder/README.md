@@ -1,16 +1,15 @@
 # tween_animation_builder
 
-A new Flutter project.
+## Docs
 
-## Getting Started
+[TweenAnimationBuilder\<T\> class](https://api.flutter.dev/flutter/widgets/TweenAnimationBuilder-class.html)
 
-This project is a starting point for a Flutter application.
+## Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+|[Sample1](./lib/pages/sample1.dart)|[Sample2](./lib/pages/sample2.dart)|[Sample3](./lib/pages/sample3.dart)|
+|:-:|:-:|:-:|
+|<img src="./screenshots/gif/Sample1.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/Sample2.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/Sample3.gif" height="400" alt="Screenshot"/>|
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+|[Sample4](./lib/pages/sample4.dart)|[ClassSample1](./lib/pages/class_sample1.dart)|
+|:-:|:-:|
+|<img src="./screenshots/Sample4.png" height="300" alt="Screenshot"/>|<img src="./screenshots/gif/ClassSample1.gif" height="400" alt="Screenshot"/>|
