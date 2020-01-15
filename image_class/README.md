@@ -1,4 +1,4 @@
-# image_class
+# Image class
 
 ## Docs
 
