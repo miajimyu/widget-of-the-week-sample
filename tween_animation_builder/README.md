@@ -1,4 +1,4 @@
-# tween_animation_builder
+# TweenAnimationBuilder
 
 ## Docs
 

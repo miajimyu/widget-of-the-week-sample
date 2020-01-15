@@ -5,7 +5,7 @@ class Sample2Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample2 curve'),
+        title: const Text('Sample2 curve'),
       ),
       body: Center(
         child: TweenAnimationBuilder<Color>(
@@ -17,7 +17,7 @@ class Sample2Page extends StatelessWidget {
           curve: Curves.bounceInOut,
           builder: (BuildContext _, Color value, Widget __) {
             return ColorFiltered(
-              child: FlutterLogo(size: 300),
+              child: const FlutterLogo(size: 300),
               colorFilter: ColorFilter.mode(value, BlendMode.modulate),
             );
           },

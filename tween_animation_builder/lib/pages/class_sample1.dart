@@ -12,12 +12,12 @@ class _ClassSample1PageState extends State<ClassSample1Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1'),
+        title: const Text('Sample1'),
       ),
       body: Center(
-        child: TweenAnimationBuilder(
+        child: TweenAnimationBuilder<double>(
           tween: Tween<double>(begin: 0, end: targetValue),
-          duration: Duration(seconds: 1),
+          duration: const Duration(seconds: 1),
           builder: (BuildContext context, double size, Widget child) {
             return IconButton(
               iconSize: size,

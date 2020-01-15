@@ -5,7 +5,7 @@ class Sample4Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample4 Add child parameter'),
+        title: const Text('Sample4 Add child parameter'),
       ),
       body: Center(
         child: TweenAnimationBuilder<Color>(
@@ -14,7 +14,7 @@ class Sample4Page extends StatelessWidget {
             begin: Colors.white,
             end: Colors.orange,
           ),
-          child: FlutterLogo(size: 300),
+          child: const FlutterLogo(size: 300),
           builder: (BuildContext _, Color value, Widget child) {
             return ColorFiltered(
               child: child,
