@@ -9,7 +9,7 @@ class _Sample1PageState extends State<Sample1Page> {
   double _currentOpacity = 0;
   @override
   Widget build(BuildContext context) {
-    Widget myWidget = Center(
+    final Widget myWidget = Center(
       child: Text(
         'Mischief\nmanaged!',
         textAlign: TextAlign.center,

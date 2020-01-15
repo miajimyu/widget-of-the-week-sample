@@ -10,7 +10,7 @@ class _ClassSample1PageState extends State<ClassSample1Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Class Sample1'),
+        title: const Text('Class Sample1'),
       ),
       body: Center(
         child: LogoFade(),
@@ -21,10 +21,10 @@ class _ClassSample1PageState extends State<ClassSample1Page> {
 
 class LogoFade extends StatefulWidget {
   @override
-  createState() => LogoFadeState();
+  _LogoFadeState createState() => _LogoFadeState();
 }
 
-class LogoFadeState extends State<LogoFade> {
+class _LogoFadeState extends State<LogoFade> {
   double opacityLevel = 1.0;
 
   void _changeOpacity() {
@@ -35,14 +35,14 @@ class LogoFadeState extends State<LogoFade> {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+      children: <Widget>[
         AnimatedOpacity(
           opacity: opacityLevel,
-          duration: Duration(seconds: 3),
-          child: FlutterLogo(),
+          duration: const Duration(seconds: 3),
+          child: const FlutterLogo(),
         ),
         RaisedButton(
-          child: Text('Fade Logo'),
+          child: const Text('Fade Logo'),
           onPressed: _changeOpacity,
         ),
       ],

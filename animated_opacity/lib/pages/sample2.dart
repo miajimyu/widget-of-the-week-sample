@@ -11,7 +11,7 @@ class _Sample2PageState extends State<Sample2Page> {
 
   @override
   void initState() {
-    isSelected = [true, false];
+    isSelected = <bool>[true, false];
     super.initState();
   }
 
@@ -33,7 +33,7 @@ class _Sample2PageState extends State<Sample2Page> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           AnimatedOpacity(
-            child: Center(
+            child: const Center(
               child: FlutterLogo(size: 300),
             ),
             curve: _getCurve(),
@@ -41,7 +41,7 @@ class _Sample2PageState extends State<Sample2Page> {
             duration: const Duration(seconds: 1),
           ),
           ToggleButtons(
-            children: <Widget>[
+            children: const <Widget>[
               Text('linear'),
               Text('elasticOut'),
             ],
