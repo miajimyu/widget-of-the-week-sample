@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: '/',
-      routes: {
+      routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => MyHomePage(),
         '/disabled_widget': (BuildContext context) => DisabledWidgetPage(),
         '/sample1': (BuildContext context) => Sample1Page(),
@@ -28,7 +28,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AbsorbPointer'),
+        title: const Text('AbsorbPointer'),
       ),
       body: SafeArea(
         child: ListView(

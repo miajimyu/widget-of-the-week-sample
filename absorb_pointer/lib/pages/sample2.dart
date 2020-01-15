@@ -5,7 +5,7 @@ class Sample2Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample2 (With AbsorbPointer)'),
+        title: const Text('Sample2 (With AbsorbPointer)'),
       ),
       body: AbsorbPointer(
         child: ABunchOfWidgets(),
@@ -22,54 +22,54 @@ class ABunchOfWidgets extends StatelessWidget {
         Card(
           child: ListTile(
             onTap: () {},
-            title: Text('One-line ListTile'),
+            title: const Text('One-line ListTile'),
           ),
         ),
         Card(
           child: ListTile(
             onTap: () {},
-            leading: FlutterLogo(),
-            title: Text('One-line with leading widget'),
+            leading: const FlutterLogo(),
+            title: const Text('One-line with leading widget'),
           ),
         ),
         Card(
           child: ListTile(
             onTap: () {},
-            title: Text('One-line with trailing widget'),
+            title: const Text('One-line with trailing widget'),
             trailing: Icon(Icons.more_vert),
           ),
         ),
         Card(
           child: ListTile(
             onTap: () {},
-            leading: FlutterLogo(),
-            title: Text('One-line with both widgets'),
+            leading: const FlutterLogo(),
+            title: const Text('One-line with both widgets'),
             trailing: Icon(Icons.more_vert),
           ),
         ),
         Card(
           child: ListTile(
             onTap: () {},
-            title: Text('One-line dense ListTile'),
+            title: const Text('One-line dense ListTile'),
             dense: true,
           ),
         ),
         Card(
           child: ListTile(
             onTap: () {},
-            leading: FlutterLogo(size: 56.0),
-            title: Text('Two-line ListTile'),
-            subtitle: Text('Here is a second line'),
+            leading: const FlutterLogo(size: 56.0),
+            title: const Text('Two-line ListTile'),
+            subtitle: const Text('Here is a second line'),
             trailing: Icon(Icons.more_vert),
           ),
         ),
         Card(
           child: ListTile(
             onTap: () {},
-            leading: FlutterLogo(size: 72.0),
-            title: Text('Three-line ListTile'),
-            subtitle:
-                Text('A sufficiently long subtitle warrants three lines.'),
+            leading: const FlutterLogo(size: 72.0),
+            title: const Text('Three-line ListTile'),
+            subtitle: const Text(
+                'A sufficiently long subtitle warrants three lines.'),
             trailing: Icon(Icons.more_vert),
             isThreeLine: true,
           ),
