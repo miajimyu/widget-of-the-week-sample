@@ -6,8 +6,8 @@ class Sample3Page extends StatefulWidget {
 }
 
 class _Sample3PageState extends State<Sample3Page> {
-  final GlobalKey<AnimatedListState> _listKey = GlobalKey();
-  List<String> _data = ['Item 1', 'Item 2', 'Item 3'];
+  final GlobalKey<AnimatedListState> _listKey = GlobalKey<AnimatedListState>();
+  final List<String> _data = <String>['Item 1', 'Item 2', 'Item 3'];
   int _dataCount;
 
   @override
@@ -20,12 +20,13 @@ class _Sample3PageState extends State<Sample3Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample3 Fade&ScaleTransition'),
+        title: const Text('Sample3 Fade&ScaleTransition'),
       ),
       body: AnimatedList(
         key: _listKey,
         initialItemCount: _dataCount,
-        itemBuilder: (context, index, animation) {
+        itemBuilder:
+            (BuildContext context, int index, Animation<double> animation) {
           return FadeTransition(
             opacity: animation,
             child: _buildItem(_data[index], index),
@@ -55,19 +56,19 @@ class _Sample3PageState extends State<Sample3Page> {
   }
 
   void _insertItem() {
-    int index = _data.length > 0 ? _data.length : 0;
+    final int index = _data.length ?? 0;
 
     _dataCount++;
-    _data.insert(index, "Item $_dataCount");
+    _data.insert(index, 'Item $_dataCount');
 
     _listKey.currentState.insertItem(index);
   }
 
   void _removeItem(int index) {
-    String removedItem = _data.removeAt(index);
+    final String removedItem = _data.removeAt(index);
     _listKey.currentState.removeItem(
       index,
-      (context, animation) {
+      (BuildContext context, Animation<double> animation) {
         return ScaleTransition(
           scale: animation,
           child: _buildItem(removedItem, index),

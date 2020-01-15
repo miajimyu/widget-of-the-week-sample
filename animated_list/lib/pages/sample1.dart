@@ -6,8 +6,8 @@ class Sample1Page extends StatefulWidget {
 }
 
 class _Sample1PageState extends State<Sample1Page> {
-  final GlobalKey<AnimatedListState> _listKey = GlobalKey();
-  List<String> _data = ['Item 1', 'Item 2', 'Item 3'];
+  final GlobalKey<AnimatedListState> _listKey = GlobalKey<AnimatedListState>();
+  final List<String> _data = <String>['Item 1', 'Item 2', 'Item 3'];
   int _dataCount;
 
   @override
@@ -20,12 +20,13 @@ class _Sample1PageState extends State<Sample1Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1'),
+        title: const Text('Sample1'),
       ),
       body: AnimatedList(
         key: _listKey,
         initialItemCount: _dataCount,
-        itemBuilder: (context, index, animation) {
+        itemBuilder:
+            (BuildContext context, int index, Animation<double> animation) {
           return SizeTransition(
             sizeFactor: animation,
             child: _buildItem(_data[index], index),
@@ -55,19 +56,19 @@ class _Sample1PageState extends State<Sample1Page> {
   }
 
   void _insertItem() {
-    int index = _data.length > 0 ? _data.length : 0;
+    final int index = _data.length ?? 0;
 
     _dataCount++;
-    _data.insert(index, "Item $_dataCount");
+    _data.insert(index, 'Item $_dataCount');
 
     _listKey.currentState.insertItem(index);
   }
 
   void _removeItem(int index) {
-    String removedItem = _data.removeAt(index);
+    final String removedItem = _data.removeAt(index);
     _listKey.currentState.removeItem(
       index,
-      (context, animation) {
+      (BuildContext context, Animation<double> animation) {
         return SizeTransition(
           sizeFactor: animation,
           child: _buildItem(removedItem, index),

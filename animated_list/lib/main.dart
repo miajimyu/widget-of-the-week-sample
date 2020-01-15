@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: '/',
-      routes: {
+      routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => HomePage(),
         '/sample1': (BuildContext context) => Sample1Page(),
         '/sample2': (BuildContext context) => Sample2Page(),
@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AnimatedList'),
+        title: const Text('AnimatedList'),
       ),
       body: SafeArea(
         child: ListView(
