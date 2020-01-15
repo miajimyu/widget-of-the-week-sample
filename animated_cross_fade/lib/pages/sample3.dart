@@ -6,15 +6,15 @@ class Sample3Page extends StatefulWidget {
 }
 
 class _Sample3PageState extends State<Sample3Page> {
-  var shouldWelcomUser = true;
+  bool shouldWelcomUser = true;
 
-  final hello = Hello();
-  final goodbye = Goodbye();
-  final lightBlueBox = Container(
+  final Hello hello = Hello();
+  final Goodbye goodbye = Goodbye();
+  final Container lightBlueBox = Container(
     width: 300,
     height: 100,
     decoration: BoxDecoration(
-      borderRadius: BorderRadius.all(Radius.circular(10)),
+      borderRadius: const BorderRadius.all(Radius.circular(10)),
       color: Colors.lightBlue[100],
     ),
   );
@@ -23,15 +23,15 @@ class _Sample3PageState extends State<Sample3Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample3 layoutBuilder'),
+        title: const Text('Sample3 layoutBuilder'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             lightBlueBox,
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             GestureDetector(
               child: AnimatedCrossFade(
                 crossFadeState: shouldWelcomUser
@@ -40,8 +40,12 @@ class _Sample3PageState extends State<Sample3Page> {
                 duration: const Duration(milliseconds: 200),
                 firstChild: hello,
                 secondChild: goodbye,
-                layoutBuilder:
-                    (topChild, topChildKey, bottomChild, bottomChildKey) {
+                layoutBuilder: (
+                  Widget topChild,
+                  Key topChildKey,
+                  Widget bottomChild,
+                  Key bottomChildKey,
+                ) {
                   return Stack(
                     overflow: Overflow.visible,
                     alignment: Alignment.center,
@@ -61,9 +65,9 @@ class _Sample3PageState extends State<Sample3Page> {
               ),
               onTap: () => setState(() => shouldWelcomUser = !shouldWelcomUser),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             lightBlueBox,
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
           ],
         ),
       ),
@@ -110,7 +114,7 @@ class Goodbye extends StatelessWidget {
       width: 250,
       height: 100,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(10)),
+        borderRadius: const BorderRadius.all(Radius.circular(10)),
         color: Colors.lightBlue,
       ),
     );

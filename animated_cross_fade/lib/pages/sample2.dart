@@ -6,15 +6,15 @@ class Sample2Page extends StatefulWidget {
 }
 
 class _Sample2PageState extends State<Sample2Page> {
-  var shouldWelcomUser = true;
+  bool shouldWelcomUser = true;
 
-  final hello = Hello();
-  final goodbye = Goodbye();
-  final lightBlueBox = Container(
+  final Hello hello = Hello();
+  final Goodbye goodbye = Goodbye();
+  final Container lightBlueBox = Container(
     width: 300,
     height: 100,
     decoration: BoxDecoration(
-      borderRadius: BorderRadius.all(Radius.circular(10)),
+      borderRadius: const BorderRadius.all(Radius.circular(10)),
       color: Colors.lightBlue[100],
     ),
   );
@@ -23,15 +23,15 @@ class _Sample2PageState extends State<Sample2Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample2 default'),
+        title: const Text('Sample2 default'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             lightBlueBox,
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             GestureDetector(
               child: AnimatedCrossFade(
                 crossFadeState: shouldWelcomUser
@@ -43,9 +43,9 @@ class _Sample2PageState extends State<Sample2Page> {
               ),
               onTap: () => setState(() => shouldWelcomUser = !shouldWelcomUser),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             lightBlueBox,
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
           ],
         ),
       ),
@@ -92,7 +92,7 @@ class Goodbye extends StatelessWidget {
       width: 250,
       height: 100,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(10)),
+        borderRadius: const BorderRadius.all(Radius.circular(10)),
         color: Colors.lightBlue,
       ),
     );

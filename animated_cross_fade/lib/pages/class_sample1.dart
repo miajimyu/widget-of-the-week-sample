@@ -6,13 +6,13 @@ class ClassSample1Page extends StatefulWidget {
 }
 
 class _ClassSample1PageState extends State<ClassSample1Page> {
-  var _first = false;
+  bool _first = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ClassSample1'),
+        title: const Text('ClassSample1'),
       ),
       body: Center(
         child: AnimatedCrossFade(

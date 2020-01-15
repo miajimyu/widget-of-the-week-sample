@@ -6,15 +6,15 @@ class Sample1Page extends StatefulWidget {
 }
 
 class _Sample1PageState extends State<Sample1Page> {
-  var shouldWelcomUser = true;
+  bool shouldWelcomUser = true;
 
-  final hello = Hello();
-  final goodbye = Goodbye();
-  final lightBlueBox = Container(
+  final Hello hello = Hello();
+  final Goodbye goodbye = Goodbye();
+  final Container lightBlueBox = Container(
     width: 300,
     height: 100,
     decoration: BoxDecoration(
-      borderRadius: BorderRadius.all(Radius.circular(10)),
+      borderRadius: const BorderRadius.all(Radius.circular(10)),
       color: Colors.lightBlue[100],
     ),
   );
@@ -23,7 +23,7 @@ class _Sample1PageState extends State<Sample1Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1'),
+        title: const Text('Sample1'),
       ),
       body: Center(
         child: Column(
@@ -88,7 +88,7 @@ class Goodbye extends StatelessWidget {
       width: 300,
       height: 300,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(10)),
+        borderRadius: const BorderRadius.all(Radius.circular(10)),
         color: Colors.lightBlue,
       ),
     );
