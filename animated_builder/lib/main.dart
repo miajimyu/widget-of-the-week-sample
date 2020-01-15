@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pages/sample_of_class.dart';
-
+import 'pages/class_sample1.dart';
 import 'pages/sample1.dart';
 
 void main() => runApp(MyApp());
@@ -11,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: '/',
-      routes: {
+      routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => MyHomePage(),
         '/sample1': (BuildContext context) => Sample1Page(),
         '/class_sample1': (BuildContext context) => ClassSample1Page(),
@@ -25,14 +24,13 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AnimatedBuilder'),
+        title: const Text('AnimatedBuilder'),
       ),
       body: SafeArea(
         child: ListView(
           children: <Widget>[
             _buildList(context, 'Sample1', '/sample1'),
-            _buildList(
-                context, 'Sample1 of AnimatedBuilder class', '/class_sample1'),
+            _buildList(context, 'Class Sample1', '/class_sample1'),
           ],
         ),
       ),

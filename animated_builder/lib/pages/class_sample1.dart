@@ -7,7 +7,7 @@ class ClassSample1Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1 of AnimatedBuilder class'),
+        title: const Text('Class Sample1'),
       ),
       body: Spinner(),
     );

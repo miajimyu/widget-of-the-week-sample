@@ -7,7 +7,7 @@ class Sample1Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1'),
+        title: const Text('Sample1'),
       ),
       body: AnimatedWidget(),
     );
@@ -40,13 +40,14 @@ class _AnimatedWidgetState extends State<AnimatedWidget>
 
   @override
   Widget build(BuildContext context) {
-    final animation = Tween(begin: 0, end: 2 * pi).animate(controller);
+    final Animation<double> animation =
+        Tween<double>(begin: 0, end: 2 * pi).animate(controller);
     return AnimatedBuilder(
       animation: animation,
-      child: FlutterLogo(
+      child: const FlutterLogo(
         size: 100,
       ),
-      builder: (context, child) {
+      builder: (BuildContext context, Widget child) {
         return Transform.rotate(
           angle: animation.value,
           child: child,
