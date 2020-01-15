@@ -8,17 +8,17 @@ class Sample1Page extends StatefulWidget {
 class _Sample1PageState extends State<Sample1Page> {
   double padValue = 0;
 
-  _updatePadding(double value) => setState(() => padValue = value);
+  void _updatePadding(double value) => setState(() => padValue = value);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1'),
+        title: const Text('Sample1'),
       ),
       body: AnimatedPadding(
         padding: EdgeInsets.all(padValue),
-        duration: Duration(seconds: 1),
+        duration: const Duration(seconds: 1),
         curve: Curves.easeInOut,
         child: Center(
           child: Container(

@@ -18,6 +18,6 @@
 
 ## Screenshots
 
-|Sample1|Sample2|
+|[Sample1](lib/pages/sample1.dart)|[Sample2](lib/pages/sample2.dart)|
 |:-:|:-:|
 |<img src="./screenshots/gif/Sample1.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/Sample2.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/Sample3.gif" height="400" alt="Screenshot"/>|
