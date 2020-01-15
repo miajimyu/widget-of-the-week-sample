@@ -6,8 +6,8 @@ class Sample4Page extends StatefulWidget {
 }
 
 class _Sample4PageState extends State<Sample4Page> {
-  var _myAnimatedWidget;
-  var _isAnimated = false;
+  Widget _myAnimatedWidget;
+  bool _isAnimated = false;
 
   @override
   void initState() {
@@ -19,7 +19,7 @@ class _Sample4PageState extends State<Sample4Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample4 layoutBuilder'),
+        title: const Text('Sample4 layoutBuilder'),
       ),
       body: Center(
         child: AnimatedSwitcher(
@@ -65,11 +65,11 @@ class _Sample4PageState extends State<Sample4Page> {
 
   Widget _blueContainer() {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(10.0)),
         color: Colors.blue,
       ),
-      key: ValueKey(1),
+      key: const ValueKey<int>(1),
       width: 200,
       height: 100,
     );
@@ -77,11 +77,11 @@ class _Sample4PageState extends State<Sample4Page> {
 
   Widget _limeContainer() {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(10.0)),
         color: Colors.lime,
       ),
-      key: ValueKey(2),
+      key: const ValueKey<int>(2),
       width: 200,
       height: 100,
     );

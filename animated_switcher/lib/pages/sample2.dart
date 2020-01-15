@@ -6,8 +6,8 @@ class Sample2Page extends StatefulWidget {
 }
 
 class _Sample2PageState extends State<Sample2Page> {
-  var _myAnimatedWidget;
-  var _isAnimated = false;
+  Widget _myAnimatedWidget;
+  bool _isAnimated = false;
 
   @override
   void initState() {
@@ -19,7 +19,7 @@ class _Sample2PageState extends State<Sample2Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample2 ScaleTransition'),
+        title: const Text('Sample2 ScaleTransition'),
       ),
       body: Center(
         child: AnimatedSwitcher(
@@ -50,11 +50,11 @@ class _Sample2PageState extends State<Sample2Page> {
 
   Widget _blueContainer() {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(10.0)),
         color: Colors.blue,
       ),
-      key: ValueKey(1),
+      key: const ValueKey<int>(1),
       width: 200,
       height: 100,
     );
@@ -62,11 +62,11 @@ class _Sample2PageState extends State<Sample2Page> {
 
   Widget _limeContainer() {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(10.0)),
         color: Colors.lime,
       ),
-      key: ValueKey(2),
+      key: const ValueKey<int>(2),
       width: 100,
       height: 200,
     );
