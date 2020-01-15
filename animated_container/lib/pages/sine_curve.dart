@@ -8,20 +8,20 @@ class SineCurveAnimation extends StatefulWidget {
 }
 
 class _SineCurveAnimationState extends State<SineCurveAnimation> {
-  var _isBig = false;
+  bool _isBig = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Custom Sine Curve'),
+        title: const Text('Custom Sine Curve'),
       ),
       body: Center(
         child: AnimatedContainer(
           width: _isBig ? 300 : 100,
-          duration: Duration(seconds: 1),
+          duration: const Duration(seconds: 1),
           child: Image.asset('images/kirin.png'),
-          curve: SineCurve(count: 2),
+          curve: const SineCurve(count: 2),
         ),
       ),
       floatingActionButton: FloatingActionButton(
@@ -37,9 +37,9 @@ class _SineCurveAnimationState extends State<SineCurveAnimation> {
 }
 
 class SineCurve extends Curve {
-  final double count;
+  const SineCurve({this.count = 1});
 
-  SineCurve({this.count = 1});
+  final double count;
 
   @override
   double transformInternal(double t) {

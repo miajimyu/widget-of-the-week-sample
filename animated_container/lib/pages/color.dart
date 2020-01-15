@@ -6,14 +6,14 @@ class AnimateColorPage extends StatefulWidget {
 }
 
 class _AnimateColorPageState extends State<AnimateColorPage> {
-  var _color = Color(0xFF00BB00);
-  var _myDuration = Duration(seconds: 1);
+  Color _color = const Color(0xFF00BB00);
+  final Duration _myDuration = const Duration(seconds: 1);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Color'),
+        title: const Text('Color'),
       ),
       body: Center(
         child: AnimatedContainer(
@@ -28,10 +28,10 @@ class _AnimateColorPageState extends State<AnimateColorPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            if (_color == Color(0xFF00BB00)) {
-              _color = Color(0xFF0000FF);
+            if (_color == const Color(0xFF00BB00)) {
+              _color = const Color(0xFF0000FF);
             } else {
-              _color = Color(0xFF00BB00);
+              _color = const Color(0xFF00BB00);
             }
           });
         },

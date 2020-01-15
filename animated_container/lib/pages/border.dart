@@ -6,14 +6,14 @@ class AnimateBorderPage extends StatefulWidget {
 }
 
 class _AnimateBorderPageState extends State<AnimateBorderPage> {
-  var _border = 1.0;
-  var _myDuration = Duration(milliseconds: 500);
+  double _border = 1.0;
+  final Duration _myDuration = const Duration(milliseconds: 500);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Border'),
+        title: const Text('Border'),
       ),
       body: Center(
         child: AnimatedContainer(
@@ -22,7 +22,7 @@ class _AnimateBorderPageState extends State<AnimateBorderPage> {
               width: _border,
               color: Colors.black,
             ),
-            color: Color(0xFF00BB00),
+            color: const Color(0xFF00BB00),
           ),
           duration: _myDuration,
           height: 200.0,
@@ -32,7 +32,7 @@ class _AnimateBorderPageState extends State<AnimateBorderPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            _border = (_border == 1.0 ? 5.0 : 1.0);
+            _border = _border == 1.0 ? 5.0 : 1.0;
           });
         },
         child: Icon(Icons.sync),

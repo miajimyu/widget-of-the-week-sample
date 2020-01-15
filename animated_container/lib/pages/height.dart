@@ -6,14 +6,14 @@ class AnimateHeightPage extends StatefulWidget {
 }
 
 class _AnimateHeightPageState extends State<AnimateHeightPage> {
-  var _height = 100.0;
-  var _myDuration = Duration(milliseconds: 200);
+  double _height = 100.0;
+  final Duration _myDuration = const Duration(milliseconds: 200);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Height'),
+        title: const Text('Height'),
       ),
       body: Center(
         child: AnimatedContainer(
@@ -24,7 +24,7 @@ class _AnimateHeightPageState extends State<AnimateHeightPage> {
             child: Center(
               child: Text(
                 'height = ${_height.round()}',
-                style: TextStyle(fontSize: 30),
+                style: const TextStyle(fontSize: 30),
               ),
             ),
             width: 300.0,
@@ -34,7 +34,7 @@ class _AnimateHeightPageState extends State<AnimateHeightPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            _height = (_height == 100.0 ? 150 : 100);
+            _height = _height == 100.0 ? 150 : 100;
           });
         },
         child: Icon(Icons.sync),

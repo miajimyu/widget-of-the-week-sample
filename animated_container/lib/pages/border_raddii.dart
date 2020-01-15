@@ -6,14 +6,14 @@ class AnimateBorderRadiiPage extends StatefulWidget {
 }
 
 class _AnimateBorderRadiiPageState extends State<AnimateBorderRadiiPage> {
-  var _borderRadii = 0.0;
-  var _myDuration = Duration(milliseconds: 200);
+  double _borderRadii = 0.0;
+  final Duration _myDuration = const Duration(milliseconds: 200);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Border Radii'),
+        title: const Text('Border Radii'),
       ),
       body: Center(
         child: AnimatedContainer(
@@ -23,7 +23,7 @@ class _AnimateBorderRadiiPageState extends State<AnimateBorderRadiiPage> {
               color: Colors.black,
             ),
             borderRadius: BorderRadius.all(Radius.circular(_borderRadii)),
-            color: Color(0xFF00BB00),
+            color: const Color(0xFF00BB00),
           ),
           duration: _myDuration,
           height: 200.0,
@@ -33,7 +33,7 @@ class _AnimateBorderRadiiPageState extends State<AnimateBorderRadiiPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            _borderRadii = (_borderRadii == 0.0 ? 20.0 : 0.0);
+            _borderRadii = _borderRadii == 0.0 ? 20.0 : 0.0;
           });
         },
         child: Icon(Icons.sync),

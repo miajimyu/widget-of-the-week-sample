@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: '/',
-      routes: {
+      routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => MyHomePage(),
         '/height': (BuildContext context) => AnimateHeightPage(),
         '/color': (BuildContext context) => AnimateColorPage(),
@@ -30,7 +30,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AnimatedContainer'),
+        title: const Text('AnimatedContainer'),
       ),
       body: SafeArea(
         child: ListView(
