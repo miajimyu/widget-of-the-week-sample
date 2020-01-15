@@ -5,7 +5,7 @@ class SampleOfAlignClassPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample of Align class'),
+        title: const Text('Sample of Align class'),
       ),
       body: Center(
         child: Column(
@@ -15,7 +15,7 @@ class SampleOfAlignClassPage extends StatelessWidget {
               height: 120.0,
               width: 120.0,
               color: Colors.blue[50],
-              child: Align(
+              child: const Align(
                 alignment: Alignment.topRight,
                 child: FlutterLogo(
                   size: 60,
@@ -26,7 +26,7 @@ class SampleOfAlignClassPage extends StatelessWidget {
               height: 120.0,
               width: 120.0,
               color: Colors.blue[50],
-              child: Align(
+              child: const Align(
                 alignment: Alignment(0.2, 0.6),
                 child: FlutterLogo(
                   size: 60,
@@ -37,7 +37,7 @@ class SampleOfAlignClassPage extends StatelessWidget {
               height: 120.0,
               width: 120.0,
               color: Colors.blue[50],
-              child: Align(
+              child: const Align(
                 alignment: FractionalOffset(0.2, 0.6),
                 child: FlutterLogo(
                   size: 60,

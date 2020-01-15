@@ -5,7 +5,7 @@ class Sample3Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample3'),
+        title: const Text('Sample3'),
       ),
       body: Stack(
         children: <Widget>[
@@ -17,7 +17,7 @@ class Sample3Page extends StatelessWidget {
             ),
           ),
           Align(
-            alignment: Alignment(0.0, 0.0),
+            alignment: const Alignment(0.0, 0.0),
             child: Text(
               'Hello!',
               style: Theme.of(context).textTheme.display1,
