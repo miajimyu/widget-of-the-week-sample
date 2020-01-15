@@ -6,10 +6,10 @@ class Sample2Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample2 title and image'),
+        title: const Text('Sample2 title and image'),
       ),
       body: CupertinoAlertDialog(
-        title: Text('Accept?'),
+        title: const Text('Accept?'),
         content: Image.asset('images/kirin.png'),
       ),
     );

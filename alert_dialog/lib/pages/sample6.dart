@@ -5,23 +5,23 @@ class Sample6Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample6 showDialog()'),
+        title: const Text('Sample6 showDialog()'),
       ),
       body: Center(
         child: RaisedButton(
-          child: Text('showDialog'),
-          onPressed: () => showDialog(
+          child: const Text('showDialog'),
+          onPressed: () => showDialog<void>(
             context: context,
             builder: (_) => AlertDialog(
-              title: Text('Accept?'),
-              content: Text('Do you accept?'),
+              title: const Text('Accept?'),
+              content: const Text('Do you accept?'),
               actions: <Widget>[
                 FlatButton(
-                  child: Text("No"),
+                  child: const Text('No'),
                   onPressed: () => Navigator.pop(context),
                 ),
                 FlatButton(
-                  child: Text("Yes"),
+                  child: const Text('Yes'),
                   onPressed: () => Navigator.pop(context),
                 ),
               ],

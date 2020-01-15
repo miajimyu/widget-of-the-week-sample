@@ -10,10 +10,10 @@ class ClassSample1Page extends StatelessWidget {
         barrierDismissible: false, // user must tap button!
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('Rewind and remember'),
+            title: const Text('Rewind and remember'),
             content: SingleChildScrollView(
               child: ListBody(
-                children: <Widget>[
+                children: const <Widget>[
                   Text('You will never be satisfied.'),
                   Text('You\’re like me. I’m never satisfied.'),
                 ],
@@ -21,7 +21,7 @@ class ClassSample1Page extends StatelessWidget {
             ),
             actions: <Widget>[
               FlatButton(
-                child: Text('Regret'),
+                child: const Text('Regret'),
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
@@ -33,14 +33,15 @@ class ClassSample1Page extends StatelessWidget {
     }
 
     return Scaffold(
-        appBar: AppBar(
-          title: Text('ClassSample1'),
+      appBar: AppBar(
+        title: const Text('ClassSample1'),
+      ),
+      body: Center(
+        child: RaisedButton(
+          child: const Text('AlertDialog'),
+          onPressed: () => _neverSatisfied(),
         ),
-        body: Center(
-          child: RaisedButton(
-            child: Text('AlertDialog'),
-            onPressed: () => _neverSatisfied(),
-          ),
-        ));
+      ),
+    );
   }
 }

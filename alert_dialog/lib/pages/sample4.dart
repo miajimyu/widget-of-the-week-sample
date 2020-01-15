@@ -5,14 +5,14 @@ class Sample4Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample4 AlertDialog'),
+        title: const Text('Sample4 AlertDialog'),
       ),
       body: AlertDialog(
-        title: Text('Accept?'),
-        content: Text('Do you accept?'),
+        title: const Text('Accept?'),
+        content: const Text('Do you accept?'),
         actions: <Widget>[
-          FlatButton(child: Text("No"), onPressed: () {}),
-          FlatButton(child: Text("Yes"), onPressed: () {}),
+          FlatButton(child: const Text('No'), onPressed: () {}),
+          FlatButton(child: const Text('Yes'), onPressed: () {}),
         ],
       ),
     );

@@ -6,9 +6,9 @@ class Sample1Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1 title and content'),
+        title: const Text('Sample1 title and content'),
       ),
-      body: CupertinoAlertDialog(
+      body: const CupertinoAlertDialog(
         title: Text('Accept?'),
         content: Text('Do you accept?'),
       ),
