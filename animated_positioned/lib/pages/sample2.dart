@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Sample2Page extends StatefulWidget {
-  final message = 'HOWDY';
+  final String message = 'HOWDY';
 
   @override
   _Sample2PageState createState() => _Sample2PageState();
@@ -15,7 +15,7 @@ class _Sample2PageState extends State<Sample2Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample2 widget grow and shrink'),
+        title: const Text('Sample2 widget grow and shrink'),
       ),
       body: Center(
         child: Container(
@@ -26,7 +26,7 @@ class _Sample2PageState extends State<Sample2Page> {
             children: <Widget>[
               MessageWidget(widget.message),
               AnimatedPositioned(
-                duration: Duration(milliseconds: 500),
+                duration: const Duration(milliseconds: 500),
                 bottom: showMessage ? 175 : 125,
                 top: showMessage ? 10 : 100,
                 child: BlockerWidget(),
@@ -48,14 +48,14 @@ class _Sample2PageState extends State<Sample2Page> {
 }
 
 class MessageWidget extends StatelessWidget {
-  final message;
+  const MessageWidget(this.message);
 
-  MessageWidget(this.message);
+  final String message;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(10.0)),
         color: Colors.lime,
       ),
@@ -75,7 +75,7 @@ class BlockerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(10.0)),
         color: Colors.blue,
       ),
