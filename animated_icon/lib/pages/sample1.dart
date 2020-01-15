@@ -21,17 +21,17 @@ class _Sample1PageState extends State<Sample1Page>
     );
     animation = Tween<double>(begin: 0, end: 300).animate(controller)
       ..addStatusListener(
-        (status) async {
+        (AnimationStatus status) async {
           if (status == AnimationStatus.completed) {
-            await Future.delayed(const Duration(milliseconds: 500));
+            await Future<dynamic>.delayed(const Duration(milliseconds: 500));
             controller?.reverse();
           } else if (status == AnimationStatus.dismissed) {
-            await Future.delayed(const Duration(milliseconds: 1000));
+            await Future<dynamic>.delayed(const Duration(milliseconds: 1000));
             controller?.forward();
           }
         },
       )
-      ..addStatusListener((state) => print('$state'));
+      ..addStatusListener((AnimationStatus state) => print('$state'));
     controller.forward();
   }
 
@@ -45,33 +45,33 @@ class _Sample1PageState extends State<Sample1Page>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1'),
+        title: const Text('Sample1'),
       ),
       body: Center(
         child: Table(
-          children: [
-            TableRow(children: [
+          children: <TableRow>[
+            TableRow(children: <Widget>[
               _buildIconButton(AnimatedIcons.add_event, 'add_event'),
               _buildIconButton(AnimatedIcons.arrow_menu, 'arrow_menu'),
               _buildIconButton(AnimatedIcons.close_menu, 'close_menu'),
             ]),
-            TableRow(children: [
+            TableRow(children: <Widget>[
               _buildIconButton(
                   AnimatedIcons.ellipsis_search, 'ellipsis_search'),
               _buildIconButton(AnimatedIcons.event_add, 'event_add'),
               _buildIconButton(AnimatedIcons.home_menu, 'home_menu'),
             ]),
-            TableRow(children: [
+            TableRow(children: <Widget>[
               _buildIconButton(AnimatedIcons.list_view, 'list_view'),
               _buildIconButton(AnimatedIcons.menu_arrow, 'menu_arrow'),
               _buildIconButton(AnimatedIcons.menu_close, 'menu_close'),
             ]),
-            TableRow(children: [
+            TableRow(children: <Widget>[
               _buildIconButton(AnimatedIcons.menu_home, 'menu_home'),
               _buildIconButton(AnimatedIcons.pause_play, 'pause_play'),
               _buildIconButton(AnimatedIcons.play_pause, 'play_pause'),
             ]),
-            TableRow(children: [
+            TableRow(children: <Widget>[
               _buildIconButton(
                   AnimatedIcons.search_ellipsis, 'search_ellipsis'),
               _buildIconButton(AnimatedIcons.view_list, 'view_list'),
