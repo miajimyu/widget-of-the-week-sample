@@ -6,6 +6,6 @@
 
 ## Screenshots
 
-|Menu|AspectRatio.aspectRatio|Expanded & Align|
-|-|-|-|
-|<img src="./screenshots/Menu.png" height="400" alt="Screenshot"/>|<img src="./screenshots/AspectRatio.png" height="400" alt="Screenshot"/>|<img src="./screenshots/ExpandedAlign.png" height="400" alt="Screenshot"/>|
+|[Sample1 AspectRatio.aspectRatio](lib/pages/sample1.dart)|[Sample2 Expanded & Align](lib/pages/sample2.dart)|
+|:-:|:-:|
+|<img src="./screenshots/AspectRatio.png" height="400" alt="Screenshot"/>|<img src="./screenshots/ExpandedAlign.png" height="400" alt="Screenshot"/>|

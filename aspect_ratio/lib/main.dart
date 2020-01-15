@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'pages/sample1.dart';
+import 'pages/sample2.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -7,10 +10,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: '/',
-      routes: {
+      routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => MyHomePage(),
-        '/aspect_ratio': (BuildContext context) => AspectRatioPage(),
-        '/expanded_align': (BuildContext context) => ExpandedAlignPage(),
+        '/sample1': (BuildContext context) => Sample1Page(),
+        '/sample2': (BuildContext context) => Sample2Page(),
       },
     );
   }
@@ -21,13 +24,13 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AspectRatio'),
+        title: const Text('AspectRatio'),
       ),
       body: SafeArea(
         child: ListView(
           children: <Widget>[
-            _buildList(context, 'AspectRatio.aspectRatio', '/aspect_ratio'),
-            _buildList(context, 'Expanded & Align', '/expanded_align'),
+            _buildList(context, 'Sample1', '/sample1'),
+            _buildList(context, 'Sample2', '/sample2'),
           ],
         ),
       ),
@@ -42,89 +45,6 @@ class MyHomePage extends StatelessWidget {
           Navigator.pushNamed(context, routeName);
         },
         trailing: Icon(Icons.chevron_right),
-      ),
-    );
-  }
-}
-
-class AspectRatioPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('AspectRatio.aspectRatio'),
-      ),
-      body: Column(
-        children: <Widget>[
-          AspectRatio(
-            aspectRatio: 3 / 2,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                color: Colors.blue,
-              ),
-              margin: EdgeInsets.all(50.0),
-              child: Center(
-                child: Text(
-                  'aspectRatio: 3 / 2',
-                  style: Theme.of(context).textTheme.display1,
-                ),
-              ),
-            ),
-          ),
-          AspectRatio(
-            aspectRatio: 1.5,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                color: Colors.lightBlue,
-              ),
-              margin: EdgeInsets.all(50.0),
-              child: Center(
-                child: Text(
-                  'aspectRatio: 1.5',
-                  style: Theme.of(context).textTheme.display1,
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ExpandedAlignPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Expanded & Align'),
-      ),
-      body: Column(
-        children: <Widget>[
-          Expanded(
-            child: Align(
-              alignment: Alignment.bottomCenter,
-              child: AspectRatio(
-                aspectRatio: 3 / 2,
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                    color: Colors.blue,
-                  ),
-                  margin: EdgeInsets.all(30.0),
-                  child: Center(
-                    child: Text(
-                      'bottomCenter',
-                      style: Theme.of(context).textTheme.display1,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ],
       ),
     );
   }
