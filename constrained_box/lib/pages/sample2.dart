@@ -5,7 +5,7 @@ class Sample2Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample2 BoxConstraints.expand()'),
+        title: const Text('Sample2 BoxConstraints.expand()'),
       ),
       body: ConstrainedBox(
         constraints: const BoxConstraints.expand(),

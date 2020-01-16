@@ -5,28 +5,28 @@ class Sample1Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1 ConstrainedBox'),
+        title: const Text('Sample1 ConstrainedBox'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ConstrainedBox(
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxWidth: 200,
               ),
-              child: Text(
+              child: const Text(
                 'Delicious Candy',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 30),
               ),
             ),
             ConstrainedBox(
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 minHeight: 100,
               ),
               child: RaisedButton(
-                child: Text('Tap Me!'),
+                child: const Text('Tap Me!'),
                 onPressed: () {},
               ),
             ),

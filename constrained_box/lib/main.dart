@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       showSemanticsDebugger: false,
       initialRoute: '/',
-      routes: {
+      routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => HomePage(),
         '/sample1': (BuildContext context) => Sample1Page(),
         '/sample2': (BuildContext context) => Sample2Page(),
@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ConstrainedBox'),
+        title: const Text('ConstrainedBox'),
       ),
       body: SafeArea(
         child: ListView(
