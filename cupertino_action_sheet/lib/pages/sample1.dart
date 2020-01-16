@@ -7,7 +7,7 @@ class Sample1Page extends StatefulWidget {
 }
 
 class _Sample1PageState extends State<Sample1Page> {
-  var thing;
+  String thing;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class _Sample1PageState extends State<Sample1Page> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            const Text(
               'Hello',
               style: TextStyle(fontSize: 70),
             ),
@@ -29,9 +29,10 @@ class _Sample1PageState extends State<Sample1Page> {
                   style: TextStyle(fontSize: 30, color: Colors.blue),
                 ),
                 onPressed: () async {
-                  var response = await showCupertinoModalPopup(
+                  final String response = await showCupertinoModalPopup<String>(
                     context: context,
-                    builder: (context) => MyActionSheet(context: context),
+                    builder: (BuildContext context) =>
+                        MyActionSheet(context: context),
                   );
                   setState(() {
                     thing = response;
@@ -45,29 +46,29 @@ class _Sample1PageState extends State<Sample1Page> {
 }
 
 class MyActionSheet extends StatelessWidget {
-  final context;
+  const MyActionSheet({this.context});
 
-  MyActionSheet({this.context});
+  final BuildContext context;
 
   @override
   Widget build(BuildContext context) {
     return CupertinoActionSheet(
-      title: Text('Thing'),
-      message: Text('A short list of things to do'),
+      title: const Text('Thing'),
+      message: const Text('A short list of things to do'),
       actions: <Widget>[
         CupertinoActionSheetAction(
-          child: Text('Good Thing'),
-          onPressed: () => Navigator.of(context).pop("good"),
+          child: const Text('Good Thing'),
+          onPressed: () => Navigator.of(context).pop('good'),
           isDefaultAction: true,
         ),
         CupertinoActionSheetAction(
-          child: Text('Bad Thing'),
-          onPressed: () => Navigator.of(context).pop("bad"),
+          child: const Text('Bad Thing'),
+          onPressed: () => Navigator.of(context).pop('bad'),
           isDestructiveAction: true,
         ),
       ],
       cancelButton: CupertinoActionSheetAction(
-        child: Text('Cancel'),
+        child: const Text('Cancel'),
         onPressed: () => Navigator.of(context).pop(),
       ),
     );

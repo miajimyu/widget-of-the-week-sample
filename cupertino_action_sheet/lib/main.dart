@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: '/',
-      routes: {
+      routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => HomePage(),
         '/sample1': (BuildContext context) => Sample1Page(),
       },
@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('CupertinoActionSheet'),
+        title: const Text('CupertinoActionSheet'),
       ),
       body: SafeArea(
         child: ListView(
