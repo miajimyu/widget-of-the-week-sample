@@ -5,17 +5,17 @@ class Sample3Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample3 numeric: true'),
+        title: const Text('Sample3 numeric: true'),
       ),
       body: DataTable(
-        columns: [
+        columns: const <DataColumn>[
           DataColumn(label: Text('Name')),
           DataColumn(
             label: Text('Year'),
             numeric: true,
           ),
         ],
-        rows: [
+        rows: const <DataRow>[
           DataRow(cells: [
             DataCell(Text('Dash')),
             DataCell(Text('2018')),

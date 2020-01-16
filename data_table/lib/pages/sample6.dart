@@ -5,14 +5,14 @@ class Sample6Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample6 placeholder: true'),
+        title: const Text('Sample6 placeholder: true'),
       ),
       body: DataTable(
-        columns: [
+        columns: const <DataColumn>[
           DataColumn(label: Text('Name')),
           DataColumn(label: Text('Year')),
         ],
-        rows: [
+        rows: const <DataRow>[
           DataRow(cells: [
             DataCell(
               Text('Fill in name'),

@@ -13,24 +13,24 @@ class _Sample7PageState extends State<Sample7Page> {
   void initState() {
     sortColumnIndex = 0;
     isSortAscending = true;
-    sortColumn(sortColumnIndex, isSortAscending);
+    sortColumn(sortColumnIndex, ascending: isSortAscending);
     super.initState();
   }
 
   Widget _buildContainer({Color color = Colors.white}) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 1),
+      margin: const EdgeInsets.symmetric(horizontal: 1),
       width: 20,
       height: 30,
       decoration: BoxDecoration(
         border: color == Colors.white ? Border.all() : null,
-        borderRadius: BorderRadius.all(Radius.circular(5.0)),
+        borderRadius: const BorderRadius.all(Radius.circular(5)),
         color: color,
       ),
     );
   }
 
-  void sortColumn(int columnIndex, bool ascending) {
+  void sortColumn(int columnIndex, {bool ascending}) {
     if (columnIndex == 0) {
       if (ascending) {
         items.sort((a, b) => a.name.compareTo(b.name));
@@ -57,7 +57,7 @@ class _Sample7PageState extends State<Sample7Page> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Sample7'),
+          title: const Text('Sample7'),
         ),
         body: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -66,38 +66,38 @@ class _Sample7PageState extends State<Sample7Page> {
             sortAscending: isSortAscending,
             columns: [
               DataColumn(
-                label: Text('Name'),
+                label: const Text('Name'),
                 onSort: (columnIndex, ascending) {
                   setState(() {
                     sortColumnIndex = columnIndex;
                     isSortAscending = ascending;
                   });
-                  sortColumn(columnIndex, ascending);
+                  sortColumn(columnIndex, ascending: ascending);
                 },
               ),
               DataColumn(label: _buildContainer(color: Colors.grey)),
               DataColumn(
-                label: Text('Year'),
+                label: const Text('Year'),
                 numeric: true,
                 onSort: (columnIndex, ascending) {
                   setState(() {
                     sortColumnIndex = columnIndex;
                     isSortAscending = ascending;
                   });
-                  sortColumn(columnIndex, ascending);
+                  sortColumn(columnIndex, ascending: ascending);
                 },
               ),
               DataColumn(
-                label: Text('Lang.'),
+                label: const Text('Lang.'),
                 onSort: (columnIndex, ascending) {
                   setState(() {
                     sortColumnIndex = columnIndex;
                     isSortAscending = ascending;
                   });
-                  sortColumn(columnIndex, ascending);
+                  sortColumn(columnIndex, ascending: ascending);
                 },
               ),
-              DataColumn(label: Text('Favorite')),
+              const DataColumn(label: Text('Favorite')),
             ],
             rows: items
                 .map((item) => DataRow(cells: [
@@ -129,12 +129,6 @@ class _Sample7PageState extends State<Sample7Page> {
 }
 
 class ItemInfo {
-  String name;
-  List<Color> colors;
-  int year;
-  String lang;
-  bool favorite;
-
   ItemInfo({
     this.name,
     this.colors,
@@ -142,9 +136,15 @@ class ItemInfo {
     this.lang,
     this.favorite,
   });
+
+  String name;
+  List<Color> colors;
+  int year;
+  String lang;
+  bool favorite;
 }
 
-var items = <ItemInfo>[
+List<ItemInfo> items = <ItemInfo>[
   ItemInfo(
     name: 'Duke',
     colors: [Colors.black, Colors.white, Colors.red],

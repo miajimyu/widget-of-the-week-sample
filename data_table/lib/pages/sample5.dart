@@ -5,14 +5,14 @@ class Sample5Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample5 showEditIcon: true'),
+        title: const Text('Sample5 showEditIcon: true'),
       ),
       body: DataTable(
-        columns: [
+        columns: const <DataColumn>[
           DataColumn(label: Text('Name')),
           DataColumn(label: Text('Year')),
         ],
-        rows: [
+        rows: const <DataRow>[
           DataRow(cells: [
             DataCell(Text('Dash'), showEditIcon: true),
             DataCell(Text('2018')),

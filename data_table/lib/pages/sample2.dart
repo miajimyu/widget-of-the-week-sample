@@ -5,17 +5,17 @@ class Sample2Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample2 Index & Ascending'),
+        title: const Text('Sample2 Index & Ascending'),
       ),
       body: DataTable(
         sortColumnIndex: 0,
         sortAscending: true,
-        columns: [
+        columns: const <DataColumn>[
           DataColumn(label: Text('Name')),
           DataColumn(label: Text('Year')),
         ],
-        rows: [
-          DataRow(cells: [
+        rows: const <DataRow>[
+          DataRow(cells: <DataCell>[
             DataCell(Text('Dash')),
             DataCell(Text('2018')),
           ]),
