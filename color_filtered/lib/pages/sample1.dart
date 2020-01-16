@@ -6,14 +6,14 @@ class Sample1Page extends StatefulWidget {
 }
 
 class _Sample1PageState extends State<Sample1Page> {
-  var isSelected = [false, false, true];
+  List<bool> isSelected = <bool>[false, false, true];
   MaterialColor _color = Colors.green;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Sample1"),
+        title: const Text('Sample1'),
       ),
       body: Center(
         child: Column(
@@ -27,10 +27,10 @@ class _Sample1PageState extends State<Sample1Page> {
               child: Image.asset('images/kirin.png'),
             ),
             ToggleButtons(
-              children: [
-                Text("Amber"),
-                Text("Blue"),
-                Text("Green"),
+              children: const <Widget>[
+                Text('Amber'),
+                Text('Blue'),
+                Text('Green'),
               ],
               onPressed: (int index) {
                 setState(() {
