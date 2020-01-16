@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: '/',
-      routes: {
+      routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => MyHomePage(),
         '/clip_r_rect': (BuildContext context) => ClipRRectPage(),
         '/other_clip': (BuildContext context) => OtherClipPage(),
@@ -23,7 +23,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ClipRRect'),
+        title: const Text('ClipRRect'),
       ),
       body: SafeArea(
         child: ListView(

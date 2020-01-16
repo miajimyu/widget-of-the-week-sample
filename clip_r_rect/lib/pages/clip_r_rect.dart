@@ -5,7 +5,7 @@ class ClipRRectPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ClipRRect'),
+        title: const Text('ClipRRect'),
       ),
       body: Center(
         child: Column(
@@ -26,7 +26,7 @@ class ClipRRectPage extends StatelessWidget {
                 color: Colors.blue,
                 width: 200.0,
                 height: 200.0,
-                child: Center(
+                child: const Center(
                   child: Text(
                     'Clip.hardEdge',
                     style: TextStyle(fontSize: 20),

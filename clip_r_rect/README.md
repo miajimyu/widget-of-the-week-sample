@@ -10,6 +10,6 @@
 
 ## Screenshots
 
-|Menu|ClipRRect|OtherClip|
-|-|-|-|
-|<img src="./screenshots/Menu.png" height="400" alt="Screenshot"/>|<img src="./screenshots/ClipRRect.png" height="400" alt="Screenshot"/>|<img src="./screenshots/OtherClip.png" height="400" alt="Screenshot"/>|
+|[ClipRRect](lib/pages/clip_r_rect.dart)|[OtherClip](lib/pages/other_clip.dart)|
+|:-:|:-:|
+|<img src="./screenshots/ClipRRect.png" height="400" alt="Screenshot"/>|<img src="./screenshots/OtherClip.png" height="400" alt="Screenshot"/>|

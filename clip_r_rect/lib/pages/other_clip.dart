@@ -5,7 +5,7 @@ class OtherClipPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Other Clip'),
+        title: const Text('Other Clip'),
       ),
       body: Center(
         child: Column(
@@ -16,7 +16,7 @@ class OtherClipPage extends StatelessWidget {
                 color: Colors.lightBlue,
                 width: 200.0,
                 height: 200.0,
-                child: Center(
+                child: const Center(
                   child: Text(
                     'ClipOval',
                     style: TextStyle(fontSize: 20),
@@ -30,7 +30,7 @@ class OtherClipPage extends StatelessWidget {
                 color: Colors.blue,
                 width: 200.0,
                 height: 200.0,
-                child: Center(
+                child: const Center(
                   child: Text(
                     'ClipPath',
                     style: TextStyle(fontSize: 20),
@@ -48,7 +48,7 @@ class OtherClipPage extends StatelessWidget {
 class MyClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
-    final path = Path();
+    final Path path = Path();
     path.lineTo(size.width, 0.0);
     path.lineTo(size.width / 2, size.height);
     path.close();
