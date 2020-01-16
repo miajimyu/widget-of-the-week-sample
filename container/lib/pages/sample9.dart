@@ -5,10 +5,10 @@ class Sample9Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample9 transform'),
+        title: const Text('Sample9 transform'),
       ),
       body: Container(
-        child: Text('Less Boring'),
+        child: const Text('Less Boring'),
         color: Colors.blue,
         alignment: Alignment.center,
         width: 200.0,

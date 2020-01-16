@@ -5,13 +5,13 @@ class Sample8Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample8 constraints'),
+        title: const Text('Sample8 constraints'),
       ),
       body: Container(
-        child: Text('Less Boring'),
+        child: const Text('Less Boring'),
         color: Colors.blue,
         alignment: Alignment.center,
-        constraints: BoxConstraints.tightForFinite(
+        constraints: const BoxConstraints.tightForFinite(
           width: 200,
         ),
       ),
