@@ -5,11 +5,11 @@ class FlutterInFocusExample1Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Example1 (Flutter In Focus)'),
+        title: const Text('Example1 (Flutter In Focus)'),
       ),
       body: Center(
         child: Container(
-          padding: EdgeInsets.all(75.0),
+          padding: const EdgeInsets.all(75.0),
           color: Colors.blue,
           width: 300,
           height: 300,
@@ -20,7 +20,7 @@ class FlutterInFocusExample1Page extends StatelessWidget {
   }
 }
 
-final customPaint = CustomPaint(
+final CustomPaint customPaint = CustomPaint(
   painter: MyPainter(),
   child: Container(),
 );
@@ -28,9 +28,10 @@ final customPaint = CustomPaint(
 class MyPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    canvas.drawCircle(Offset(120, 70), 50, Paint());
-    canvas.drawLine(Offset(0, 150), Offset(120, 150), Paint());
-    canvas.drawRect(Rect.fromPoints(Offset.zero, Offset(50, 100)), Paint());
+    canvas.drawCircle(const Offset(120, 70), 50, Paint());
+    canvas.drawLine(const Offset(0, 150), const Offset(120, 150), Paint());
+    canvas.drawRect(
+        Rect.fromPoints(Offset.zero, const Offset(50, 100)), Paint());
   }
 
   @override

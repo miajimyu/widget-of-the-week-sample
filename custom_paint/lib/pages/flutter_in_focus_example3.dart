@@ -1,16 +1,17 @@
-import 'package:flutter/material.dart';
 import 'dart:math' as math;
+
+import 'package:flutter/material.dart';
 
 class FlutterInFocusExample3Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Example3 (Flutter In Focus)'),
+        title: const Text('Example3 (Flutter In Focus)'),
       ),
       body: Center(
         child: Container(
-          padding: EdgeInsets.all(75.0),
+          padding: const EdgeInsets.all(75.0),
           color: Colors.blue,
           width: 300,
           height: 300,
@@ -21,7 +22,7 @@ class FlutterInFocusExample3Page extends StatelessWidget {
   }
 }
 
-final customPaint = CustomPaint(
+final CustomPaint customPaint = CustomPaint(
   painter: MyPainter(),
   child: Container(),
 );
@@ -29,13 +30,13 @@ final customPaint = CustomPaint(
 class MyPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    final radius = math.min(size.width, size.height) / 2;
-    final center = Offset(size.width / 2, size.height / 2);
+    final double radius = math.min(size.width, size.height) / 2;
+    final Offset center = Offset(size.width / 2, size.height / 2);
     // Draw the body
-    final paint = Paint()..color = Colors.yellow;
+    final Paint paint = Paint()..color = Colors.yellow;
     canvas.drawCircle(center, radius, paint);
     // Draw the mouth
-    final smilePaint = Paint()
+    final Paint smilePaint = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = 10;
     canvas.drawArc(Rect.fromCircle(center: center, radius: radius / 2), 0,
