@@ -7,7 +7,7 @@ class Sample3Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample of BackdropFilter class'),
+        title: const Text('Sample of BackdropFilter class'),
       ),
       body: Stack(
         fit: StackFit.expand,
@@ -25,7 +25,7 @@ class Sample3Page extends StatelessWidget {
                   alignment: Alignment.center,
                   width: 200.0,
                   height: 200.0,
-                  child: Text('Hello World'),
+                  child: const Text('Hello World'),
                 ),
               ),
             ),

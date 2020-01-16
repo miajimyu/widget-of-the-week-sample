@@ -7,7 +7,7 @@ class Sample1Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1 Positioned.fill()'),
+        title: const Text('Sample1 Positioned.fill()'),
       ),
       body: Stack(
         children: <Widget>[
