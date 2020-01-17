@@ -10,8 +10,7 @@ class Sample2Page extends StatelessWidget {
       body: Center(
         child: Image.network(
           'https://picsum.photos/250?image=9',
-          loadingBuilder:
-              (BuildContext context, Widget child, ImageChunkEvent progress) {
+          loadingBuilder: (context, child, progress) {
             return progress == null
                 ? child
                 : LinearProgressIndicator(

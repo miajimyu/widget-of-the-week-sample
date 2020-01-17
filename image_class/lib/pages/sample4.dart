@@ -12,7 +12,7 @@ class _Sample4PageState extends State<Sample4Page> {
   File imageFile;
 
   Future<void> _getImageFile(ImageSource source) async {
-    final File file = await ImagePicker.pickImage(source: source);
+    final file = await ImagePicker.pickImage(source: source);
 
     setState(() {
       imageFile = file;
