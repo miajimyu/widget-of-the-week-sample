@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+import 'pages/floating_action_button1.dart';
+import 'pages/floating_action_button2.dart';
+import 'pages/floating_action_button3.dart';
+import 'pages/floating_action_button4.dart';
+import 'pages/sample1.dart';
+import 'pages/sample2.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -8,13 +15,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (BuildContext context) => MyHomePage(),
-        '/fab1': (BuildContext context) => FAB1(),
-        '/fab2': (BuildContext context) => FAB2(),
-        '/fab3': (BuildContext context) => FAB3(),
-        '/fab4': (BuildContext context) => FAB4(),
-        '/sample1': (BuildContext context) => Sample1(),
-        '/sample2': (BuildContext context) => Sample2(),
+        '/': (context) => MyHomePage(),
+        '/fab1': (context) => FAB1(),
+        '/fab2': (context) => FAB2(),
+        '/fab3': (context) => FAB3(),
+        '/fab4': (context) => FAB4(),
+        '/sample1': (context) => Sample1(),
+        '/sample2': (context) => Sample2(),
       },
     );
   }
@@ -25,7 +32,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FloatingActionButton'),
+        title: const Text('FloatingActionButton'),
       ),
       body: ListView(
         children: <Widget>[
@@ -48,109 +55,6 @@ class MyHomePage extends StatelessWidget {
           Navigator.pushNamed(context, routeName);
         },
         trailing: Icon(Icons.chevron_right),
-      ),
-    );
-  }
-}
-
-class FAB1 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {},
-      ),
-    );
-  }
-}
-
-class FAB2 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {},
-      ),
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.yellow,
-        child: Container(height: 50.0),
-      ),
-    );
-  }
-}
-
-class FAB3 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {},
-      ),
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.yellow,
-        child: Container(height: 50.0),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
-    );
-  }
-}
-
-class FAB4 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {},
-      ),
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.yellow,
-        child: Container(height: 50.0),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-    );
-  }
-}
-
-class Sample1 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Floating Action Button Sample'),
-      ),
-      body: Center(child: Text('Press the button below!')),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Add your onPressed code here!
-        },
-        child: Icon(Icons.thumb_up),
-        backgroundColor: Colors.pink,
-      ),
-    );
-  }
-}
-
-class Sample2 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Floating Action Button Sample'),
-      ),
-      body: Center(
-        child: Text('Press the extended button below!'),
-      ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          // Add your onPressed code here!
-        },
-        label: Text('Approve'),
-        icon: Icon(Icons.thumb_up),
-        backgroundColor: Colors.pink,
       ),
     );
   }
