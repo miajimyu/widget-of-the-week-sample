@@ -8,6 +8,6 @@
 
 ## Screenshots
 
-|Menu|Hero|Using clip|
-|-|-|-|
-|<img src="./screenshots/Menu.png" height="400" alt="Screenshot"/>|<img src="./screenshots//gif/Hero.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/UsingClip.gif" height="400" alt="Screenshot"/>|
+|[Hero](lib/pages/hero.dart)|[Using clip](lib/pages/using_clip.dart)|
+|:-:|:-:|
+|<img src="./screenshots//gif/Hero.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/UsingClip.gif" height="400" alt="Screenshot"/>|

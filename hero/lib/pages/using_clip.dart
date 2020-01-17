@@ -6,7 +6,7 @@ class UsingClipPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Using clip'),
+        title: const Text('Using clip'),
       ),
       backgroundColor: Colors.grey,
       body: Container(
@@ -20,12 +20,12 @@ class UsingClipPage extends StatelessWidget {
               tag: 'kirin',
               child: Container(
                 child: Image.asset('images/kirin.png'),
-                height: 100.0,
+                height: 100,
               ),
             ),
           ),
         ),
-        margin: EdgeInsets.all(10.0),
+        margin: const EdgeInsets.all(10),
       ),
     );
   }
@@ -36,7 +36,7 @@ class UsingClipDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detail'),
+        title: const Text('Detail'),
       ),
       backgroundColor: Colors.grey,
       body: Center(
@@ -47,10 +47,10 @@ class UsingClipDetailPage extends StatelessWidget {
           child: Hero(
             tag: 'kirin',
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(15.0),
+              borderRadius: BorderRadius.circular(15),
               child: Container(
                 child: Image.asset('images/kirin.png'),
-                height: 300.0,
+                height: 300,
               ),
             ),
           ),

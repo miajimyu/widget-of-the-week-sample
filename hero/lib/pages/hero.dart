@@ -5,7 +5,7 @@ class HeroPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hero'),
+        title: const Text('Hero'),
       ),
       body: GestureDetector(
         onTap: () {
@@ -17,10 +17,10 @@ class HeroPage extends StatelessWidget {
               tag: 'kirin',
               child: Container(
                 child: Image.asset('images/kirin.png'),
-                height: 100.0,
+                height: 100,
               ),
             ),
-            Text('kirin'),
+            const Text('kirin'),
           ],
         ),
       ),
@@ -33,7 +33,7 @@ class HeroDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detail'),
+        title: const Text('Detail'),
       ),
       body: Column(
         children: <Widget>[

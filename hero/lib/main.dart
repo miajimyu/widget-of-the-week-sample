@@ -10,11 +10,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (BuildContext context) => MyHomePage(),
-        '/hero': (BuildContext context) => HeroPage(),
-        '/hero_detail': (BuildContext context) => HeroDetailPage(),
-        '/clip': (BuildContext context) => UsingClipPage(),
-        '/clip_detail': (BuildContext context) => UsingClipDetailPage(),
+        '/': (context) => MyHomePage(),
+        '/hero': (context) => HeroPage(),
+        '/hero_detail': (context) => HeroDetailPage(),
+        '/clip': (context) => UsingClipPage(),
+        '/clip_detail': (context) => UsingClipDetailPage(),
       },
     );
   }
@@ -25,7 +25,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hero'),
+        title: const Text('Hero'),
       ),
       body: SafeArea(
         child: ListView(
