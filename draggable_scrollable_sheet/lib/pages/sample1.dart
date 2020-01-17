@@ -5,7 +5,7 @@ class Sample1Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1'),
+        title: const Text('Sample1'),
       ),
       body: DraggableScrollableSheet(
         initialChildSize: 0.3,
@@ -20,7 +20,7 @@ class Sample1Page extends StatelessWidget {
                 color: Colors.amber,
                 child: Column(
                   children: <Widget>[
-                    FlutterLogo(
+                    const FlutterLogo(
                       size: 200,
                     ),
                     for (var i = 0; i < 10; i++)

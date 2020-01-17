@@ -9,13 +9,13 @@ class ClassSample1Page extends StatelessWidget {
       ),
       body: SizedBox.expand(
         child: DraggableScrollableSheet(
-          builder: (BuildContext context, ScrollController scrollController) {
+          builder: (context, scrollController) {
             return Container(
               color: Colors.blue[100],
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: 25,
-                itemBuilder: (BuildContext context, int index) {
+                itemBuilder: (context, index) {
                   return ListTile(title: Text('Item $index'));
                 },
               ),
