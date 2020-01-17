@@ -6,7 +6,7 @@ class Sample4Page extends StatefulWidget {
 }
 
 class _Sample4PageState extends State<Sample4Page> {
-  var items = [
+  List<Container> items = [
     Container(color: Colors.blue),
     Container(color: Colors.yellow),
     Container(color: Colors.green),
@@ -17,13 +17,13 @@ class _Sample4PageState extends State<Sample4Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample4'),
+        title: const Text('Sample4'),
       ),
       body: Center(
         child: Container(
-          height: 100.0,
+          height: 100,
           child: ListView.builder(
-            padding: EdgeInsets.symmetric(horizontal: 5.0),
+            padding: const EdgeInsets.symmetric(horizontal: 5),
             scrollDirection: Axis.horizontal,
             itemCount: items.length,
             itemBuilder: (context, i) {

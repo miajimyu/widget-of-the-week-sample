@@ -6,11 +6,11 @@ class CookbookSamplePage extends StatefulWidget {
 }
 
 class _CookbookSamplePageState extends State<CookbookSamplePage> {
-  final items = List<String>.generate(3, (i) => "Item ${i + 1}");
+  final List<String> items = List<String>.generate(3, (i) => 'Item ${i + 1}');
 
   @override
   Widget build(BuildContext context) {
-    final title = 'Dismissing Items';
+    const title = 'Dismissing Items';
 
     return MaterialApp(
       title: title,
@@ -19,7 +19,7 @@ class _CookbookSamplePageState extends State<CookbookSamplePage> {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text(title),
+          title: const Text(title),
         ),
         body: ListView.builder(
           itemCount: items.length,
@@ -40,7 +40,7 @@ class _CookbookSamplePageState extends State<CookbookSamplePage> {
 
                 // Then show a snackbar.
                 Scaffold.of(context)
-                    .showSnackBar(SnackBar(content: Text("$item dismissed")));
+                    .showSnackBar(SnackBar(content: Text('$item dismissed')));
               },
               // Show a red background as the item is swiped away.
               background: Container(color: Colors.red),

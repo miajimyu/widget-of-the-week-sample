@@ -6,7 +6,7 @@ class Sample3Page extends StatefulWidget {
 }
 
 class _Sample3PageState extends State<Sample3Page> {
-  var items = [
+  List<String> items = [
     'This is a list item',
     'This is aoso a list item',
     "we've got a lot of items",
@@ -17,7 +17,7 @@ class _Sample3PageState extends State<Sample3Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample3'),
+        title: const Text('Sample3'),
       ),
       body: ListView.builder(
         itemCount: items.length,
@@ -37,16 +37,16 @@ class _Sample3PageState extends State<Sample3Page> {
             background: Container(
               alignment: Alignment.centerLeft,
               color: Colors.green,
-              child: Padding(
-                padding: EdgeInsets.only(left: 20.0),
+              child: const Padding(
+                padding: EdgeInsets.only(left: 20),
                 child: Icon(Icons.check),
               ),
             ),
             secondaryBackground: Container(
               alignment: Alignment.centerRight,
               color: Colors.red,
-              child: Padding(
-                padding: EdgeInsets.only(right: 20.0),
+              child: const Padding(
+                padding: EdgeInsets.only(right: 20),
                 child: Icon(Icons.cancel),
               ),
             ),

@@ -6,7 +6,7 @@ class Sample2Page extends StatefulWidget {
 }
 
 class _Sample2PageState extends State<Sample2Page> {
-  var items = [
+  List<String> items = [
     'This is a list item',
     'This is aoso a list item',
     "we've got a lot of items",
@@ -17,7 +17,7 @@ class _Sample2PageState extends State<Sample2Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample2'),
+        title: const Text('Sample2'),
       ),
       body: ListView.builder(
         itemCount: items.length,

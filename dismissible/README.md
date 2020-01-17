@@ -8,11 +8,10 @@
 
 ## Screenshots
 
-|Menu|Sample1|Sample2|
+|[Sample1](lib/pages/sample1.dart)|[Sample2](lib/pages/sample2.dart)|[Sample3](lib/pages/sample3.dart)|
 |:-:|:-:|:-:|
-|<img src="./screenshots/Menu.png" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/Sample1.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/Sample2.gif" height="400" alt="Screenshot"/>|
+|<img src="./screenshots/gif/Sample1.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/Sample2.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/Sample3.gif" height="400" alt="Screenshot"/>|
 
-
-|Sample3|Sample4|Sample of Cookbook|
-|:-:|:-:|:-:|
-|<img src="./screenshots/gif/Sample3.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/Sample4.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/CookbookSample.gif" height="400" alt="Screenshot"/>|
+|[Sample4](lib/pages/sample4.dart)|[Sample of Cookbook](lib/pages/sample_cookbook.dart)|
+|:-:|:-:|
+|<img src="./screenshots/gif/Sample4.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/CookbookSample.gif" height="400" alt="Screenshot"/>|
