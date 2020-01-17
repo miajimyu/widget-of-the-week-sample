@@ -5,21 +5,17 @@ class Sample2Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample2 (Alignment)'),
+        title: const Text('Sample2 (Alignment)'),
       ),
       body: Center(
         child: Column(
-          children: <Widget>[
+          children: const <Widget>[
             Spacer(flex: 1),
             MyRect(
               child: FittedBox(
                 alignment: Alignment.centerLeft,
                 fit: BoxFit.contain,
-                child: Column(
-                  children: <Widget>[
-                    FlutterLogo(),
-                  ],
-                ),
+                child: FlutterLogo(),
               ),
             ),
             Text('Alignment.centerLeft'),
@@ -28,11 +24,7 @@ class Sample2Page extends StatelessWidget {
               child: FittedBox(
                 alignment: Alignment.centerRight,
                 fit: BoxFit.contain,
-                child: Column(
-                  children: <Widget>[
-                    FlutterLogo(),
-                  ],
-                ),
+                child: FlutterLogo(),
               ),
             ),
             Text('Alignment.centerRight'),
@@ -45,9 +37,9 @@ class Sample2Page extends StatelessWidget {
 }
 
 class MyRect extends StatelessWidget {
-  final child;
+  const MyRect({@required this.child});
 
-  MyRect({@required this.child});
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
@@ -55,8 +47,8 @@ class MyRect extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border.all(width: 1),
       ),
-      width: 200.0,
-      height: 100.0,
+      width: 200,
+      height: 100,
       child: child,
     );
   }

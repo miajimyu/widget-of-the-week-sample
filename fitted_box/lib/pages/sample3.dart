@@ -5,11 +5,11 @@ class Sample3Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample3 (Text)'),
+        title: const Text('Sample3 (Text)'),
       ),
       body: Center(
         child: Column(
-          children: <Widget>[
+          children: const <Widget>[
             Spacer(flex: 1),
             MyRect(
               child: Text('Text'),
@@ -29,9 +29,9 @@ class Sample3Page extends StatelessWidget {
 }
 
 class MyRect extends StatelessWidget {
-  final child;
+  const MyRect({@required this.child});
 
-  MyRect({@required this.child});
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
@@ -39,8 +39,8 @@ class MyRect extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border.all(width: 1),
       ),
-      width: 200.0,
-      height: 100.0,
+      width: 200,
+      height: 100,
       child: child,
     );
   }
