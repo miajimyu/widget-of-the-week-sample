@@ -6,6 +6,6 @@
 
 ## Screenshots
 
-|Sample1|
+|[Sample1](lib/pages/sample1.dart)|
 |:-:|
 |<img src="./screenshots/gif/Sample1.gif" height="400" alt="Screenshot"/>|

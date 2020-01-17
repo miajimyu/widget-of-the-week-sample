@@ -6,13 +6,13 @@ class Sample1Page extends StatefulWidget {
 }
 
 class _Sample1PageState extends State<Sample1Page> {
-  var color = Colors.lime;
+  MaterialColor color = Colors.lime;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1 ColorInfo -> 1 -> 2 -> 3'),
+        title: const Text('Sample1 ColorInfo -> 1 -> 2 -> 3'),
       ),
       body: ColorInfo(
         color: color,
@@ -31,11 +31,12 @@ class _Sample1PageState extends State<Sample1Page> {
 }
 
 class ColorInfo extends InheritedWidget {
-  final Color color;
-  ColorInfo({
+  const ColorInfo({
     @required this.color,
     @required Widget child,
   }) : super(child: child);
+
+  final Color color;
 
   @override
   bool updateShouldNotify(ColorInfo oldWidget) => oldWidget.color != color;
@@ -55,7 +56,7 @@ class One extends StatelessWidget {
           width: 100,
           height: 100,
           color: color,
-          child: Center(
+          child: const Center(
             child: Text('1', style: TextStyle(fontSize: 30)),
           ),
         ),
@@ -76,7 +77,7 @@ class Two extends StatelessWidget {
           width: 100,
           height: 100,
           color: color,
-          child: Center(
+          child: const Center(
             child: Text('2', style: TextStyle(fontSize: 30)),
           ),
         ),
@@ -95,7 +96,7 @@ class Three extends StatelessWidget {
       width: 100,
       height: 100,
       color: color,
-      child: Center(
+      child: const Center(
         child: Text('3', style: TextStyle(fontSize: 30)),
       ),
     );
