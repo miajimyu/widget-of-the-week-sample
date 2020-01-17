@@ -13,11 +13,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (BuildContext context) => HomePage(),
-        '/sample1': (BuildContext context) => Sample1Page(),
-        '/sample2': (BuildContext context) => Sample2Page(),
-        '/sample3': (BuildContext context) => Sample3Page(),
-        '/sample4': (BuildContext context) => Sample4Page(),
+        '/': (context) => HomePage(),
+        '/sample1': (context) => Sample1Page(),
+        '/sample2': (context) => Sample2Page(),
+        '/sample3': (context) => Sample3Page(),
+        '/sample4': (context) => Sample4Page(),
       },
     );
   }
@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Draggable'),
+        title: const Text('Draggable'),
       ),
       body: SafeArea(
         child: ListView(

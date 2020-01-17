@@ -5,14 +5,14 @@ class Sample1Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1'),
+        title: const Text('Sample1'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Draggable<Color>(
-              data: Color(0x000000ff),
+              data: const Color(0x000000ff),
               child: Container(
                 width: 100,
                 height: 100,
@@ -31,7 +31,7 @@ class Sample1Page extends StatelessWidget {
             ),
             DragTarget<Color>(
               builder: (context, candidates, rejects) {
-                return candidates.length > 0
+                return candidates.isNotEmpty
                     ? Container(
                         color: candidates[0],
                         width: 100,

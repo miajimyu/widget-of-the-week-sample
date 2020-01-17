@@ -6,7 +6,7 @@ class Sample4Page extends StatelessWidget {
     Color _color = Colors.red;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample4 onLeave'),
+        title: const Text('Sample4 onLeave'),
       ),
       body: Center(
         child: Column(
