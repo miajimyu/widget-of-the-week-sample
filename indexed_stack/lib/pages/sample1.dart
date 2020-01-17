@@ -12,7 +12,7 @@ class _Sample1PageState extends State<Sample1Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1'),
+        title: const Text('Sample1'),
       ),
       body: IndexedStack(
         index: _widgetIndex,
@@ -34,7 +34,7 @@ class _Sample1PageState extends State<Sample1Page> {
         ],
         currentIndex: _widgetIndex,
         selectedItemColor: Colors.amber[800],
-        onTap: (int index) {
+        onTap: (index) {
           setState(() {
             _widgetIndex = index;
           });
@@ -47,7 +47,7 @@ class _Sample1PageState extends State<Sample1Page> {
 class WidgetOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: FlutterLogo(
         size: 200,
       ),
@@ -71,7 +71,7 @@ class _WidgetTwoState extends State<WidgetTwo> {
         height: MediaQuery.of(context).size.width / 2,
         decoration: BoxDecoration(
             color: Colors.lightBlue[300],
-            borderRadius: BorderRadius.all(Radius.circular(10.0))),
+            borderRadius: const BorderRadius.all(Radius.circular(10))),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
