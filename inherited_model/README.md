@@ -8,6 +8,6 @@
 
 # Screenshots
 
-|InheritedWidget|InheritedModel|
+|[InheritedWidget](lib/pages/inherited_widget.dart)|[InheritedModel](lib/pages/inherited_model.dart)|
 |:-:|:-:|
 |<img src="./screenshots/gif/InheritedWidget.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/InheritedModel.gif" height="400" alt="Screenshot"/>|

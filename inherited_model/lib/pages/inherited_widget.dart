@@ -6,14 +6,14 @@ class InheritedWidgetPage extends StatefulWidget {
 }
 
 class _InheritedWidgetPageState extends State<InheritedWidgetPage> {
-  var colorOne = Colors.amber;
-  var colorTwo = Colors.blue;
+  MaterialColor colorOne = Colors.amber;
+  MaterialColor colorTwo = Colors.blue;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('InheritedWidget'),
+        title: const Text('InheritedWidget'),
       ),
       body: Center(
         child: Column(
@@ -49,20 +49,15 @@ class _InheritedWidgetPageState extends State<InheritedWidgetPage> {
   }
 }
 
-enum NUMBER_TYPE {
-  ONE,
-  TWO,
-}
-
 class MyAncestor extends InheritedWidget {
-  final Color colorOne;
-  final Color colorTwo;
-
   const MyAncestor(
     this.colorOne,
     this.colorTwo,
     Widget child,
   ) : super(child: child);
+
+  final Color colorOne;
+  final Color colorTwo;
 
   @override
   bool updateShouldNotify(MyAncestor oldWidget) {
@@ -83,8 +78,8 @@ class ColorOneWidget extends StatelessWidget {
 
     return Container(
       color: ancestor.colorOne,
-      height: 50.0,
-      width: 50.0,
+      height: 50,
+      width: 50,
     );
   }
 }
@@ -98,8 +93,8 @@ class ColorTwoWidget extends StatelessWidget {
 
     return Container(
       color: ancestor.colorTwo,
-      height: 50.0,
-      width: 50.0,
+      height: 50,
+      width: 50,
     );
   }
 }

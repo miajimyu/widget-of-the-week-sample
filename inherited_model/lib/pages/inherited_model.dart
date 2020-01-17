@@ -6,14 +6,14 @@ class InheritedModelPage extends StatefulWidget {
 }
 
 class _InheritedModelPageState extends State<InheritedModelPage> {
-  var colorOne = Colors.amber;
-  var colorTwo = Colors.blue;
+  MaterialColor colorOne = Colors.amber;
+  MaterialColor colorTwo = Colors.blue;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('InheritedModel'),
+        title: const Text('InheritedModel'),
       ),
       body: Center(
         child: Column(
@@ -50,19 +50,19 @@ class _InheritedModelPageState extends State<InheritedModelPage> {
 }
 
 enum NUMBER_TYPE {
-  ONE,
-  TWO,
+  one,
+  two,
 }
 
 class MyAncestor extends InheritedModel<NUMBER_TYPE> {
-  final Color colorOne;
-  final Color colorTwo;
-
   const MyAncestor(
     this.colorOne,
     this.colorTwo,
     Widget child,
   ) : super(child: child);
+
+  final Color colorOne;
+  final Color colorTwo;
 
   @override
   bool updateShouldNotify(MyAncestor oldWidget) {
@@ -72,10 +72,10 @@ class MyAncestor extends InheritedModel<NUMBER_TYPE> {
   @override
   bool updateShouldNotifyDependent(
       MyAncestor oldWidget, Set<NUMBER_TYPE> dependencies) {
-    return ((dependencies.contains(NUMBER_TYPE.ONE) &&
-            colorOne != oldWidget.colorOne) ||
-        (dependencies.contains(NUMBER_TYPE.TWO) &&
-            colorTwo != oldWidget.colorTwo));
+    return dependencies.contains(NUMBER_TYPE.one) &&
+            colorOne != oldWidget.colorOne ||
+        dependencies.contains(NUMBER_TYPE.two) &&
+            colorTwo != oldWidget.colorTwo;
   }
 
   static MyAncestor of(BuildContext context, {NUMBER_TYPE aspect}) {
@@ -88,12 +88,12 @@ class ColorOneWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ancestor = MyAncestor.of(context, aspect: NUMBER_TYPE.ONE);
+    final ancestor = MyAncestor.of(context, aspect: NUMBER_TYPE.one);
 
     return Container(
       color: ancestor.colorOne,
-      height: 50.0,
-      width: 50.0,
+      height: 50,
+      width: 50,
     );
   }
 }
@@ -103,12 +103,12 @@ class ColorTwoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ancestor = MyAncestor.of(context, aspect: NUMBER_TYPE.TWO);
+    final ancestor = MyAncestor.of(context, aspect: NUMBER_TYPE.two);
 
     return Container(
       color: ancestor.colorTwo,
-      height: 50.0,
-      width: 50.0,
+      height: 50,
+      width: 50,
     );
   }
 }

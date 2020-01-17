@@ -10,9 +10,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (BuildContext context) => MyHomePage(),
-        '/inherited_widget': (BuildContext context) => InheritedWidgetPage(),
-        '/inherited_model': (BuildContext context) => InheritedModelPage(),
+        '/': (context) => MyHomePage(),
+        '/inherited_widget': (context) => InheritedWidgetPage(),
+        '/inherited_model': (context) => InheritedModelPage(),
       },
     );
   }
@@ -23,7 +23,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('InheritedModel'),
+        title: const Text('InheritedModel'),
       ),
       body: SafeArea(
         child: ListView(
