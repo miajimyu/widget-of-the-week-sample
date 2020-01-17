@@ -6,6 +6,6 @@
 
 ## Screenshots
 
-|Menu|Sample|
-|-|-|
-|<img src="./screenshots/Menu.png" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/Sample.gif" height="400" alt="Screenshot"/>|
+|[Sample](lib/pages/sample1.dart)|
+|:-:|
+|<img src="./screenshots/gif/Sample.gif" height="400" alt="Screenshot"/>|
