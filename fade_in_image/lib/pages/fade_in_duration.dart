@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 class FadeInDurationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final title = 'FadeInDuration';
+    const title = 'FadeInDuration';
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: const Text(title),
       ),
       body: Center(
         child: FadeInImage.assetNetwork(

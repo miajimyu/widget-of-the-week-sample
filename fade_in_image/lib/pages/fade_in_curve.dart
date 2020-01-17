@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 class FadeInCurvePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final title = 'FadeInCurve';
+    const title = 'FadeInCurve';
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: const Text(title),
       ),
       body: Center(
         child: FadeInImage.assetNetwork(

@@ -6,15 +6,15 @@ import 'package:transparent_image/transparent_image.dart';
 class MemoryNetworkPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final title = 'FadeInImage.memoryNetwork()';
+    const title = 'FadeInImage.memoryNetwork()';
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: const Text(title),
       ),
       body: Stack(
         children: <Widget>[
-          Center(child: CircularProgressIndicator()),
+          const Center(child: CircularProgressIndicator()),
           Center(
             child: FadeInImage.memoryNetwork(
               placeholder: kTransparentImage,

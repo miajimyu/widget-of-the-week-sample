@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 class AssetNetworkPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final title = 'FadeInImage.assetNetwork()';
+    const title = 'FadeInImage.assetNetwork()';
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: const Text(title),
       ),
       body: Center(
         child: FadeInImage.assetNetwork(
