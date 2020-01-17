@@ -5,7 +5,7 @@ class Sample2Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample2 FlexFit.loose'),
+        title: const Text('Sample2 FlexFit.loose'),
       ),
       body: Column(
         children: <Widget>[

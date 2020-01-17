@@ -5,7 +5,7 @@ class Sample3Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample3 Mix fixed-size widget'),
+        title: const Text('Sample3 Mix fixed-size widget'),
       ),
       body: Column(
         children: <Widget>[
