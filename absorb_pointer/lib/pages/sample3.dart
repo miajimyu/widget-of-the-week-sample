@@ -73,7 +73,7 @@ class ABunchOfWidgets extends StatelessWidget {
         Card(
           child: ListTile(
             onTap: () {},
-            leading: const FlutterLogo(size: 56.0),
+            leading: const FlutterLogo(size: 56),
             title: const Text('Two-line ListTile'),
             subtitle: const Text('Here is a second line'),
             trailing: Icon(Icons.more_vert),
@@ -82,7 +82,7 @@ class ABunchOfWidgets extends StatelessWidget {
         Card(
           child: ListTile(
             onTap: () {},
-            leading: const FlutterLogo(size: 72.0),
+            leading: const FlutterLogo(size: 72),
             title: const Text('Three-line ListTile'),
             subtitle: const Text(
                 'A sufficiently long subtitle warrants three lines.'),
