@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:safe_area/pages/safe_area.dart';
+import 'package:safe_area/pages/without_safe_area.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,16 +10,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (BuildContext context) => MyHomePage(),
-        '/page1': (BuildContext context) => Page1(),
-        '/page2': (BuildContext context) => Page2(),
+        '/': (context) => MyHomePage(),
+        '/without_safe_area': (context) => WithoutSafeAreaPage(),
+        '/safe_area': (context) => SafeAreaPage(),
       },
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
-  var title = 'SafeArea';
+  final String title = 'SafeArea';
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +30,8 @@ class MyHomePage extends StatelessWidget {
       body: SafeArea(
         child: ListView(
           children: <Widget>[
-            _buildList(context, 'Without SafeArea', '/page1'),
-            _buildList(context, 'With SafeArea', '/page2'),
+            _buildList(context, 'Without SafeArea', '/without_safe_area'),
+            _buildList(context, 'With SafeArea', '/safe_area'),
           ],
         ),
       ),
@@ -44,42 +46,6 @@ class MyHomePage extends StatelessWidget {
           Navigator.pushNamed(context, routeName);
         },
         trailing: Icon(Icons.chevron_right),
-      ),
-    );
-  }
-}
-
-class Page1 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView(
-        children: List.generate(
-          100,
-          (i) => Text(
-                'This is some text',
-                style: TextStyle(backgroundColor: Colors.amber),
-              ),
-        ),
-      ),
-    );
-  }
-}
-
-class Page2 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: ListView(
-          children: List.generate(
-            100,
-            (i) => Text(
-                  'This is some text',
-                  style: TextStyle(backgroundColor: Colors.amber),
-                ),
-          ),
-        ),
       ),
     );
   }
