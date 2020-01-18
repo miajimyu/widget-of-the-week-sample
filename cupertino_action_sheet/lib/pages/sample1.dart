@@ -29,10 +29,9 @@ class _Sample1PageState extends State<Sample1Page> {
                   style: TextStyle(fontSize: 30, color: Colors.blue),
                 ),
                 onPressed: () async {
-                  final String response = await showCupertinoModalPopup<String>(
+                  final response = await showCupertinoModalPopup<String>(
                     context: context,
-                    builder: (BuildContext context) =>
-                        MyActionSheet(context: context),
+                    builder: (context) => MyActionSheet(context: context),
                   );
                   setState(() {
                     thing = response;
