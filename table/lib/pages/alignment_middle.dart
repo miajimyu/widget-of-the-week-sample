@@ -6,7 +6,7 @@ class AlignmentMiddlePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Alignment (Middle)'),
+        title: const Text('Alignment (Middle)'),
       ),
       body: Table(
         defaultVerticalAlignment: TableCellVerticalAlignment.middle,

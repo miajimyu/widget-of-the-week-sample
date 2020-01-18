@@ -6,7 +6,7 @@ class AlignmentBottomPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Alignment (Bottom)'),
+        title: const Text('Alignment (Bottom)'),
       ),
       body: Table(
         defaultVerticalAlignment: TableCellVerticalAlignment.bottom,

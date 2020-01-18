@@ -6,10 +6,12 @@ class Column1Widthdot2Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Column = 1, Width = .2'),
+        title: const Text('Column = 1, Width = .2'),
       ),
       body: Table(
-        columnWidths: {1: FractionColumnWidth(.2)},
+        columnWidths: const {
+          1: FractionColumnWidth(.2),
+        },
         children: [
           TableRow(children: [
             wideWidget(),

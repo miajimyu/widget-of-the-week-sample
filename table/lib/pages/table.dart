@@ -6,7 +6,7 @@ class TablePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Table'),
+        title: const Text('Table'),
       ),
       body: Table(
         children: [

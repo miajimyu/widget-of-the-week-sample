@@ -6,10 +6,10 @@ class FixedColumnWidthPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FixedColumnWidth = 30.0'),
+        title: const Text('FixedColumnWidth = 30.0'),
       ),
       body: Table(
-        defaultColumnWidth: FixedColumnWidth(30.0),
+        defaultColumnWidth: const FixedColumnWidth(30),
         children: [
           TableRow(children: [
             wideWidget(),

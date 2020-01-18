@@ -6,10 +6,10 @@ class FlexColumnWidthPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FlexColumnWidth = 1.0'),
+        title: const Text('FlexColumnWidth = 1.0'),
       ),
       body: Table(
-        defaultColumnWidth: FlexColumnWidth(1.0),
+        defaultColumnWidth: const FlexColumnWidth(1),
         children: [
           TableRow(children: [
             wideWidget(),

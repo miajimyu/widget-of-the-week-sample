@@ -6,10 +6,10 @@ class FractionColumnWidthPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FractionColumnWidth = .25'),
+        title: const Text('FractionColumnWidth = .25'),
       ),
       body: Table(
-        defaultColumnWidth: FractionColumnWidth(.25),
+        defaultColumnWidth: const FractionColumnWidth(.25),
         children: [
           TableRow(children: [
             wideWidget(),

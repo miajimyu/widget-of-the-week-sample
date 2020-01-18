@@ -16,15 +16,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (BuildContext context) => MyHomePage(),
-        '/table': (BuildContext context) => TablePage(),
-        '/middle': (BuildContext context) => AlignmentMiddlePage(),
-        '/bottom': (BuildContext context) => AlignmentBottomPage(),
-        '/flex': (BuildContext context) => FlexColumnWidthPage(),
-        '/fraction': (BuildContext context) => FractionColumnWidthPage(),
-        '/fixed': (BuildContext context) => FixedColumnWidthPage(),
-        '/column=1_width=.2': (BuildContext context) => Column1Widthdot2Page(),
-        '/border': (BuildContext context) => BorderPage(),
+        '/': (context) => MyHomePage(),
+        '/table': (context) => TablePage(),
+        '/middle': (context) => AlignmentMiddlePage(),
+        '/bottom': (context) => AlignmentBottomPage(),
+        '/flex': (context) => FlexColumnWidthPage(),
+        '/fraction': (context) => FractionColumnWidthPage(),
+        '/fixed': (context) => FixedColumnWidthPage(),
+        '/column=1_width=.2': (context) => Column1Widthdot2Page(),
+        '/border': (context) => BorderPage(),
       },
     );
   }
@@ -35,7 +35,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Table'),
+        title: const Text('Table'),
       ),
       body: SafeArea(
         child: ListView(

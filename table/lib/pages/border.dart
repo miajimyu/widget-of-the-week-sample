@@ -6,7 +6,7 @@ class BorderPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Border'),
+        title: const Text('Border'),
       ),
       body: Table(
         border: TableBorder.all(),
