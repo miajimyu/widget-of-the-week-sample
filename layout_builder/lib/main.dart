@@ -9,8 +9,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (BuildContext context) => MyHomePage(),
-        '/sample1': (BuildContext context) => Sample1Page(),
+        '/': (context) => MyHomePage(),
+        '/sample1': (context) => Sample1Page(),
       },
     );
   }
@@ -21,7 +21,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('LayoutBuilder'),
+        title: const Text('LayoutBuilder'),
       ),
       body: SafeArea(
         child: ListView(
