@@ -29,7 +29,7 @@ class Sample2Page extends StatelessWidget {
               width: 100,
               height: 100,
               child: const Align(
-                alignment: Alignment(0.00, 0.00),
+                alignment: Alignment(0, 0),
                 child: Text('Hello!'),
               ),
             ),
@@ -40,7 +40,7 @@ class Sample2Page extends StatelessWidget {
               width: 100,
               height: 100,
               child: const Align(
-                alignment: Alignment(1.00, 0.50),
+                alignment: Alignment(1, 0.50),
                 child: Text('Hello!'),
               ),
             ),

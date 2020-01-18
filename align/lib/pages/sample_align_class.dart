@@ -12,8 +12,8 @@ class SampleOfAlignClassPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Container(
-              height: 120.0,
-              width: 120.0,
+              height: 120,
+              width: 120,
               color: Colors.blue[50],
               child: const Align(
                 alignment: Alignment.topRight,
@@ -23,8 +23,8 @@ class SampleOfAlignClassPage extends StatelessWidget {
               ),
             ),
             Container(
-              height: 120.0,
-              width: 120.0,
+              height: 120,
+              width: 120,
               color: Colors.blue[50],
               child: const Align(
                 alignment: Alignment(0.2, 0.6),
@@ -34,8 +34,8 @@ class SampleOfAlignClassPage extends StatelessWidget {
               ),
             ),
             Container(
-              height: 120.0,
-              width: 120.0,
+              height: 120,
+              width: 120,
               color: Colors.blue[50],
               child: const Align(
                 alignment: FractionalOffset(0.2, 0.6),

@@ -17,7 +17,7 @@ class Sample3Page extends StatelessWidget {
             ),
           ),
           Align(
-            alignment: const Alignment(0.0, 0.0),
+            alignment: const Alignment(0, 0),
             child: Text(
               'Hello!',
               style: Theme.of(context).textTheme.display1,
