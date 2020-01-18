@@ -46,7 +46,7 @@ class _Sample1PageState extends State<Sample1Page> {
   Widget _blueContainer() {
     return Container(
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        borderRadius: BorderRadius.all(Radius.circular(10)),
         color: Colors.blue,
       ),
       key: const ValueKey<int>(1),
@@ -58,7 +58,7 @@ class _Sample1PageState extends State<Sample1Page> {
   Widget _limeContainer() {
     return Container(
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        borderRadius: BorderRadius.all(Radius.circular(10)),
         color: Colors.lime,
       ),
       key: const ValueKey<int>(2),

@@ -24,8 +24,7 @@ class _Sample2PageState extends State<Sample2Page> {
       body: Center(
         child: AnimatedSwitcher(
           duration: const Duration(milliseconds: 300),
-          transitionBuilder: (Widget child, Animation<double> animation) =>
-              ScaleTransition(
+          transitionBuilder: (child, animation) => ScaleTransition(
             child: child,
             scale: animation,
           ),
@@ -51,7 +50,7 @@ class _Sample2PageState extends State<Sample2Page> {
   Widget _blueContainer() {
     return Container(
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        borderRadius: BorderRadius.all(Radius.circular(10)),
         color: Colors.blue,
       ),
       key: const ValueKey<int>(1),
@@ -63,7 +62,7 @@ class _Sample2PageState extends State<Sample2Page> {
   Widget _limeContainer() {
     return Container(
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        borderRadius: BorderRadius.all(Radius.circular(10)),
         color: Colors.lime,
       ),
       key: const ValueKey<int>(2),

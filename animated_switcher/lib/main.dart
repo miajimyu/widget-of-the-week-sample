@@ -14,12 +14,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: <String, WidgetBuilder>{
-        '/': (BuildContext context) => HomePage(),
-        '/sample1': (BuildContext context) => Sample1Page(),
-        '/sample2': (BuildContext context) => Sample2Page(),
-        '/sample3': (BuildContext context) => Sample3Page(),
-        '/sample4': (BuildContext context) => Sample4Page(),
-        '/sample': (BuildContext context) => const ClickCounter(),
+        '/': (context) => HomePage(),
+        '/sample1': (context) => Sample1Page(),
+        '/sample2': (context) => Sample2Page(),
+        '/sample3': (context) => Sample3Page(),
+        '/sample4': (context) => Sample4Page(),
+        '/sample': (context) => const ClickCounter(),
       },
     );
   }

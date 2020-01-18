@@ -25,8 +25,7 @@ class _Sample4PageState extends State<Sample4Page> {
         child: AnimatedSwitcher(
           duration: const Duration(milliseconds: 300),
           layoutBuilder: _layoutBuilder,
-          transitionBuilder: (Widget child, Animation<double> animation) =>
-              RotationTransition(
+          transitionBuilder: (child, animation) => RotationTransition(
             child: child,
             turns: animation,
           ),
@@ -50,23 +49,13 @@ class _Sample4PageState extends State<Sample4Page> {
   }
 
   Widget _layoutBuilder(Widget currentChild, List<Widget> previousChildren) {
-    // static Widget defaultLayoutBuilder(Widget currentChild, List<Widget> previousChildren) {
-    //   List<Widget> children = previousChildren;
-    //   if (currentChild != null)
-    //     children = children.toList()..add(currentChild);
-    //   return Stack(
-    //     children: children,
-    //     alignment: Alignment.center,
-    //   );
-    // }
-
     return currentChild;
   }
 
   Widget _blueContainer() {
     return Container(
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        borderRadius: BorderRadius.all(Radius.circular(10)),
         color: Colors.blue,
       ),
       key: const ValueKey<int>(1),
@@ -78,7 +67,7 @@ class _Sample4PageState extends State<Sample4Page> {
   Widget _limeContainer() {
     return Container(
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        borderRadius: BorderRadius.all(Radius.circular(10)),
         color: Colors.lime,
       ),
       key: const ValueKey<int>(2),

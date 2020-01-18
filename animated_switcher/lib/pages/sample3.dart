@@ -24,8 +24,7 @@ class _Sample3PageState extends State<Sample3Page> {
       body: Center(
         child: AnimatedSwitcher(
           duration: const Duration(milliseconds: 300),
-          transitionBuilder: (Widget child, Animation<double> animation) =>
-              RotationTransition(
+          transitionBuilder: (child, animation) => RotationTransition(
             child: child,
             turns: animation,
           ),
@@ -51,7 +50,7 @@ class _Sample3PageState extends State<Sample3Page> {
   Widget _blueContainer() {
     return Container(
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        borderRadius: BorderRadius.all(Radius.circular(10)),
         color: Colors.blue,
       ),
       key: const ValueKey<int>(1),
@@ -63,7 +62,7 @@ class _Sample3PageState extends State<Sample3Page> {
   Widget _limeContainer() {
     return Container(
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        borderRadius: BorderRadius.all(Radius.circular(10)),
         color: Colors.lime,
       ),
       key: const ValueKey<int>(2),

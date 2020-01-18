@@ -19,14 +19,14 @@ class _ClickCounterState extends State<ClickCounter> {
           children: <Widget>[
             AnimatedSwitcher(
               duration: const Duration(milliseconds: 500),
-              transitionBuilder: (Widget child, Animation<double> animation) {
+              transitionBuilder: (child, animation) {
                 return ScaleTransition(child: child, scale: animation);
               },
               child: Text(
                 '$_count',
-                // This key causes the AnimatedSwitcher to interpret this as a "new"
-                // child each time the count changes, so that it will begin its animation
-                // when the count changes.
+                // This key causes the AnimatedSwitcher to interpret this
+                // as a "new" child each time the count changes, so that
+                // it will begin its animation when the count changes.
                 key: ValueKey<int>(_count),
                 style: Theme.of(context).textTheme.display1,
               ),
