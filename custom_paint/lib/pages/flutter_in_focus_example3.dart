@@ -11,7 +11,7 @@ class FlutterInFocusExample3Page extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          padding: const EdgeInsets.all(75.0),
+          padding: const EdgeInsets.all(75),
           color: Colors.blue,
           width: 300,
           height: 300,
@@ -30,22 +30,23 @@ final CustomPaint customPaint = CustomPaint(
 class MyPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    final double radius = math.min(size.width, size.height) / 2;
-    final Offset center = Offset(size.width / 2, size.height / 2);
+    final radius = math.min(size.width, size.height) / 2;
+    final center = Offset(size.width / 2, size.height / 2);
     // Draw the body
-    final Paint paint = Paint()..color = Colors.yellow;
+    final paint = Paint()..color = Colors.yellow;
     canvas.drawCircle(center, radius, paint);
     // Draw the mouth
-    final Paint smilePaint = Paint()
+    final smilePaint = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = 10;
-    canvas.drawArc(Rect.fromCircle(center: center, radius: radius / 2), 0,
-        math.pi, false, smilePaint);
-    // Draw the eyes
-    canvas.drawCircle(
-        Offset(center.dx - radius / 2, center.dy - radius / 2), 10, Paint());
-    canvas.drawCircle(
-        Offset(center.dx + radius / 2, center.dy - radius / 2), 10, Paint());
+    canvas
+      ..drawArc(Rect.fromCircle(center: center, radius: radius / 2), 0, math.pi,
+          false, smilePaint)
+      // Draw the eyes
+      ..drawCircle(
+          Offset(center.dx - radius / 2, center.dy - radius / 2), 10, Paint())
+      ..drawCircle(
+          Offset(center.dx + radius / 2, center.dy - radius / 2), 10, Paint());
   }
 
   @override

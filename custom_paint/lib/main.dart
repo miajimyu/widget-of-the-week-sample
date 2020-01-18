@@ -11,12 +11,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: '/',
-      routes: <String, WidgetBuilder>{
-        '/': (BuildContext context) => MyHomePage(),
-        '/custom_paint1': (BuildContext context) => CustomPaintPage(),
-        '/example1': (BuildContext context) => FlutterInFocusExample1Page(),
-        '/example2': (BuildContext context) => FlutterInFocusExample2Page(),
-        '/example3': (BuildContext context) => FlutterInFocusExample3Page(),
+      routes: {
+        '/': (context) => MyHomePage(),
+        '/custom_paint1': (context) => CustomPaintPage(),
+        '/example1': (context) => FlutterInFocusExample1Page(),
+        '/example2': (context) => FlutterInFocusExample2Page(),
+        '/example3': (context) => FlutterInFocusExample3Page(),
       },
     );
   }

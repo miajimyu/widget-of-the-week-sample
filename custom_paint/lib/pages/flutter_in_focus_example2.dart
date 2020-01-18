@@ -9,7 +9,7 @@ class FlutterInFocusExample2Page extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          padding: const EdgeInsets.all(75.0),
+          padding: const EdgeInsets.all(75),
           color: Colors.blue,
           width: 300,
           height: 300,
@@ -28,13 +28,13 @@ final CustomPaint customPaint = CustomPaint(
 class MyPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    final Paint myPaint = Paint()
+    final myPaint = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = 10;
-    canvas.drawCircle(const Offset(120, 70), 50, myPaint);
-    canvas.drawLine(const Offset(0, 150), const Offset(120, 150), myPaint);
-    canvas.drawRect(
-        Rect.fromPoints(Offset.zero, const Offset(50, 100)), myPaint);
+    canvas
+      ..drawCircle(const Offset(120, 70), 50, myPaint)
+      ..drawLine(const Offset(0, 150), const Offset(120, 150), myPaint)
+      ..drawRect(Rect.fromPoints(Offset.zero, const Offset(50, 100)), myPaint);
   }
 
   @override
