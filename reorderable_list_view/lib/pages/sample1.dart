@@ -6,13 +6,13 @@ class Sample1Page extends StatefulWidget {
 }
 
 class _Sample1PageState extends State<Sample1Page> {
-  var myItems = ["1", "2", "3"];
+  List<String> myItems = ['1', '2', '3'];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1'),
+        title: const Text('Sample1'),
       ),
       body: Center(
           child: ReorderableListView(
@@ -40,10 +40,11 @@ class _Sample1PageState extends State<Sample1Page> {
   }
 
   void _updateMyItems(int oldIndex, int newIndex) {
-    var _index = oldIndex < newIndex ? newIndex - 1 : newIndex;
-    var _item = myItems[oldIndex];
-    myItems.remove(_item);
-    myItems.insert(_index, _item);
-    print("$myItems, insertAt: $_index, item: $_item");
+    final _index = oldIndex < newIndex ? newIndex - 1 : newIndex;
+    final _item = myItems[oldIndex];
+    myItems
+      ..remove(_item)
+      ..insert(_index, _item);
+    print('$myItems, insertAt: $_index, item: $_item');
   }
 }
