@@ -41,10 +41,10 @@ class _Sample3PageState extends State<Sample3Page> {
                 firstChild: hello,
                 secondChild: goodbye,
                 layoutBuilder: (
-                  Widget topChild,
-                  Key topChildKey,
-                  Widget bottomChild,
-                  Key bottomChildKey,
+                  topChild,
+                  topChildKey,
+                  bottomChild,
+                  bottomChildKey,
                 ) {
                   return Stack(
                     overflow: Overflow.visible,

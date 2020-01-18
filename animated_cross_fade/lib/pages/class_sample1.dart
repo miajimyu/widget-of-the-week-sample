@@ -17,10 +17,10 @@ class _ClassSample1PageState extends State<ClassSample1Page> {
       body: Center(
         child: AnimatedCrossFade(
           duration: const Duration(seconds: 3),
-          firstChild: const FlutterLogo(
-              style: FlutterLogoStyle.horizontal, size: 100.0),
+          firstChild:
+              const FlutterLogo(style: FlutterLogoStyle.horizontal, size: 100),
           secondChild:
-              const FlutterLogo(style: FlutterLogoStyle.stacked, size: 100.0),
+              const FlutterLogo(style: FlutterLogoStyle.stacked, size: 100),
           crossFadeState:
               _first ? CrossFadeState.showFirst : CrossFadeState.showSecond,
         ),
