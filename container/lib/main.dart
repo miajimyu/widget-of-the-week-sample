@@ -19,19 +19,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: '/',
-      routes: <String, WidgetBuilder>{
-        '/': (BuildContext context) => HomePage(),
-        '/sample1': (BuildContext context) => Sample1Page(),
-        '/sample2': (BuildContext context) => Sample2Page(),
-        '/sample3': (BuildContext context) => Sample3Page(),
-        '/sample4': (BuildContext context) => Sample4Page(),
-        '/sample5': (BuildContext context) => Sample5Page(),
-        '/sample6': (BuildContext context) => Sample6Page(),
-        '/sample7': (BuildContext context) => Sample7Page(),
-        '/sample8': (BuildContext context) => Sample8Page(),
-        '/sample9': (BuildContext context) => Sample9Page(),
-        '/class_sample1': (BuildContext context) => ClassSample1Page(),
-        '/class_sample2': (BuildContext context) => ClassSample2Page(),
+      routes: {
+        '/': (context) => HomePage(),
+        '/sample1': (context) => Sample1Page(),
+        '/sample2': (context) => Sample2Page(),
+        '/sample3': (context) => Sample3Page(),
+        '/sample4': (context) => Sample4Page(),
+        '/sample5': (context) => Sample5Page(),
+        '/sample6': (context) => Sample6Page(),
+        '/sample7': (context) => Sample7Page(),
+        '/sample8': (context) => Sample8Page(),
+        '/sample9': (context) => Sample9Page(),
+        '/class_sample1': (context) => ClassSample1Page(),
+        '/class_sample2': (context) => ClassSample2Page(),
       },
     );
   }

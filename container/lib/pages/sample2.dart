@@ -10,7 +10,7 @@ class Sample2Page extends StatelessWidget {
       body: Container(
         child: const Text('Less Boring'),
         color: Colors.blue,
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20),
       ),
     );
   }

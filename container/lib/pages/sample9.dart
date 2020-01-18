@@ -11,8 +11,8 @@ class Sample9Page extends StatelessWidget {
         child: const Text('Less Boring'),
         color: Colors.blue,
         alignment: Alignment.center,
-        width: 200.0,
-        height: 200.0,
+        width: 200,
+        height: 200,
         transform: Matrix4.rotationZ(0.05),
       ),
     );

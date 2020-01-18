@@ -11,7 +11,7 @@ class ClassSample2Page extends StatelessWidget {
         constraints: BoxConstraints.expand(
           height: Theme.of(context).textTheme.display1.fontSize * 1.1 + 200.0,
         ),
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8),
         color: Colors.blue[600],
         alignment: Alignment.center,
         child: Text('Hello World',

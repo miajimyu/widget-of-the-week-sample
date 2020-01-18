@@ -9,10 +9,10 @@ class ClassSample1Page extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          margin: const EdgeInsets.all(10.0),
+          margin: const EdgeInsets.all(10),
           color: Colors.amber[600],
-          width: 48.0,
-          height: 48.0,
+          width: 48,
+          height: 48,
         ),
       ),
     );

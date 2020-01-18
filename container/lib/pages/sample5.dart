@@ -13,8 +13,8 @@ class Sample5Page extends StatelessWidget {
           shape: BoxShape.circle,
           color: Colors.blue,
         ),
-        margin: const EdgeInsets.all(25.0),
-        padding: const EdgeInsets.all(40.0),
+        margin: const EdgeInsets.all(25),
+        padding: const EdgeInsets.all(40),
       ),
     );
   }
