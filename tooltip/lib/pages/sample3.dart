@@ -5,11 +5,11 @@ class Sample3Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample3 (Button)'),
+        title: const Text('Sample3 (Button)'),
       ),
       body: Center(
         child: IconButton(
-          iconSize: 100.0,
+          iconSize: 100,
           icon: Icon(Icons.high_quality),
           tooltip: 'High quality',
           onPressed: () {},
