@@ -25,8 +25,7 @@ class _Sample1PageState extends State<Sample1Page> {
       body: AnimatedList(
         key: _listKey,
         initialItemCount: _dataCount,
-        itemBuilder:
-            (BuildContext context, int index, Animation<double> animation) {
+        itemBuilder: (context, index, animation) {
           return SizeTransition(
             sizeFactor: animation,
             child: _buildItem(_data[index], index),
@@ -35,7 +34,7 @@ class _Sample1PageState extends State<Sample1Page> {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.playlist_add),
-        onPressed: () => _insertItem(),
+        onPressed: _insertItem,
       ),
     );
   }
@@ -56,7 +55,7 @@ class _Sample1PageState extends State<Sample1Page> {
   }
 
   void _insertItem() {
-    final int index = _data.length ?? 0;
+    final index = _data.length ?? 0;
 
     _dataCount++;
     _data.insert(index, 'Item $_dataCount');
@@ -65,10 +64,10 @@ class _Sample1PageState extends State<Sample1Page> {
   }
 
   void _removeItem(int index) {
-    final String removedItem = _data.removeAt(index);
+    final removedItem = _data.removeAt(index);
     _listKey.currentState.removeItem(
       index,
-      (BuildContext context, Animation<double> animation) {
+      (context, animation) {
         return SizeTransition(
           sizeFactor: animation,
           child: _buildItem(removedItem, index),
