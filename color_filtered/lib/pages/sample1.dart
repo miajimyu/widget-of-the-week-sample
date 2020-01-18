@@ -32,9 +32,9 @@ class _Sample1PageState extends State<Sample1Page> {
                 Text('Blue'),
                 Text('Green'),
               ],
-              onPressed: (int index) {
+              onPressed: (index) {
                 setState(() {
-                  for (int buttonIndex = 0;
+                  for (var buttonIndex = 0;
                       buttonIndex < isSelected.length;
                       buttonIndex++) {
                     if (buttonIndex == index) {
