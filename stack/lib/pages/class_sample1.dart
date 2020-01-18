@@ -5,7 +5,7 @@ class ClassSample1Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Class Sample1'),
+        title: const Text('Class Sample1'),
       ),
       body: Stack(
         children: <Widget>[

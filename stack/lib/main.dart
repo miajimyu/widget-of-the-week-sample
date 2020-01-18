@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'pages/class_sample1.dart';
+import 'pages/class_sample2.dart';
 import 'pages/sample1.dart';
 import 'pages/sample2.dart';
 import 'pages/sample3.dart';
 import 'pages/sample4.dart';
-import 'pages/class_sample1.dart';
-import 'pages/class_sample2.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,13 +16,13 @@ class MyApp extends StatelessWidget {
       showSemanticsDebugger: false,
       initialRoute: '/',
       routes: {
-        '/': (BuildContext context) => HomePage(),
-        '/sample1': (BuildContext context) => Sample1Page(),
-        '/sample2': (BuildContext context) => Sample2Page(),
-        '/sample3': (BuildContext context) => Sample3Page(),
-        '/sample4': (BuildContext context) => Sample4Page(),
-        '/class_sample1': (BuildContext context) => ClassSample1Page(),
-        '/class_sample2': (BuildContext context) => ClassSample2Page(),
+        '/': (context) => HomePage(),
+        '/sample1': (context) => Sample1Page(),
+        '/sample2': (context) => Sample2Page(),
+        '/sample3': (context) => Sample3Page(),
+        '/sample4': (context) => Sample4Page(),
+        '/class_sample1': (context) => ClassSample1Page(),
+        '/class_sample2': (context) => ClassSample2Page(),
       },
     );
   }
@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Stack'),
+        title: const Text('Stack'),
       ),
       body: SafeArea(
         child: ListView(
