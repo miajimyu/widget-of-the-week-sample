@@ -11,9 +11,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (BuildContext context) => MyHomePage(),
-        '/sample1': (BuildContext context) => Sample1Page(),
-        '/sample2': (BuildContext context) => Sample2Page(),
+        '/': (context) => MyHomePage(),
+        '/sample1': (context) => Sample1Page(),
+        '/sample2': (context) => Sample2Page(),
       },
     );
   }
@@ -24,7 +24,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('MediaQuery'),
+        title: const Text('MediaQuery'),
       ),
       body: SafeArea(
         child: ListView(

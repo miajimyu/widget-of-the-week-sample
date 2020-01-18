@@ -6,23 +6,23 @@ class Sample1Page extends StatelessWidget {
       children: List.generate(
         10,
         (i) => Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                color: Colors.indigo,
-              ),
-              height: 50,
-              margin: EdgeInsets.all(3),
-            ),
+          decoration: const BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(5)),
+            color: Colors.indigo,
+          ),
+          height: 50,
+          margin: const EdgeInsets.all(3),
+        ),
       ),
     );
   }
 
   Widget _buildContainer() {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8),
       child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(5.0)),
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(5)),
           color: Colors.blue,
         ),
       ),
@@ -31,9 +31,10 @@ class Sample1Page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var oneColumnLayout = 500;
-    var screenSize = MediaQuery.of(context).size;
-    var widget;
+    const oneColumnLayout = 500;
+    final screenSize = MediaQuery.of(context).size;
+    Widget widget;
+
     if (screenSize.width > oneColumnLayout) {
       widget = Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
