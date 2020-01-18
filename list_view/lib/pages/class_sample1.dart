@@ -5,7 +5,7 @@ class ClassSample1Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ClassSample1 ListView()'),
+        title: const Text('ClassSample1 ListView()'),
       ),
       body: ListView(
         padding: const EdgeInsets.all(8),

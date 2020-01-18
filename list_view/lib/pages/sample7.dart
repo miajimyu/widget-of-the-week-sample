@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Sample7Page extends StatelessWidget {
-  final mySliverChildDelegate = SliverChildListDelegate(
+  final SliverChildListDelegate mySliverChildDelegate = SliverChildListDelegate(
     <Widget>[
       const Text('I\'m dedicating every day to you'),
       const Text('Domestic life was never quite my style'),
@@ -14,7 +14,7 @@ class Sample7Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample7 ListView.custom()'),
+        title: const Text('Sample7 ListView.custom()'),
       ),
       body: ListView.custom(
         childrenDelegate: mySliverChildDelegate,

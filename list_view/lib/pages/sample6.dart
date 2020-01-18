@@ -5,11 +5,11 @@ class Sample6Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample6 ListView.separated()'),
+        title: const Text('Sample6 ListView.separated()'),
       ),
       body: ListView.separated(
         itemBuilder: (_, index) => Text('Item $index'),
-        separatorBuilder: (_, index) => Divider(),
+        separatorBuilder: (_, index) => const Divider(),
         itemCount: 10,
       ),
     );
