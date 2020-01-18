@@ -5,24 +5,24 @@ class Sample2Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample2'),
+        title: const Text('Sample2'),
       ),
       body: Center(
         child: Column(
           children: <Widget>[
-            Spacer(flex: 2),
-            Text('allow for multiple selection (>=0)'),
+            const Spacer(flex: 2),
+            const Text('allow for multiple selection (>=0)'),
             ToggleButton1(),
-            Spacer(),
-            Text('mutually exclusive selection (>=1)'),
+            const Spacer(),
+            const Text('mutually exclusive selection (>=1)'),
             ToggleButton2(),
-            Spacer(),
-            Text('mutually exclusive selection (>=0)'),
+            const Spacer(),
+            const Text('mutually exclusive selection (>=0)'),
             ToggleButton3(),
-            Spacer(),
-            Text('allow for multiple selection (>=1)'),
+            const Spacer(),
+            const Text('allow for multiple selection (>=1)'),
             ToggleButton4(),
-            Spacer(flex: 2),
+            const Spacer(flex: 2),
           ],
         ),
       ),
@@ -46,7 +46,7 @@ class _ToggleButton1State extends State<ToggleButton1> {
         Icon(Icons.call),
         Icon(Icons.cake),
       ],
-      onPressed: (int index) {
+      onPressed: (index) {
         setState(() {
           isSelected[index] = !isSelected[index];
         });
@@ -72,9 +72,9 @@ class _ToggleButton2State extends State<ToggleButton2> {
         Icon(Icons.call),
         Icon(Icons.cake),
       ],
-      onPressed: (int index) {
+      onPressed: (index) {
         setState(() {
-          for (int buttonIndex = 0;
+          for (var buttonIndex = 0;
               buttonIndex < isSelected.length;
               buttonIndex++) {
             if (buttonIndex == index) {
@@ -106,9 +106,9 @@ class _ToggleButton3State extends State<ToggleButton3> {
         Icon(Icons.call),
         Icon(Icons.cake),
       ],
-      onPressed: (int index) {
+      onPressed: (index) {
         setState(() {
-          for (int buttonIndex = 0;
+          for (var buttonIndex = 0;
               buttonIndex < isSelected.length;
               buttonIndex++) {
             if (buttonIndex == index) {
@@ -140,13 +140,18 @@ class _ToggleButton4State extends State<ToggleButton4> {
         Icon(Icons.call),
         Icon(Icons.cake),
       ],
-      onPressed: (int index) {
-        int count = 0;
-        isSelected.forEach((bool val) {
-          if (val) count++;
-        });
+      onPressed: (index) {
+        var count = 0;
 
-        if (isSelected[index] && count < 2) return;
+        for (final item in isSelected) {
+          if (item) {
+            count++;
+          }
+        }
+
+        if (isSelected[index] && count < 2) {
+          return;
+        }
 
         setState(() {
           isSelected[index] = !isSelected[index];

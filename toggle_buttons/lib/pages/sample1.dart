@@ -5,27 +5,27 @@ class Sample1Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1'),
+        title: const Text('Sample1'),
       ),
       body: Center(
           child: Column(
         children: <Widget>[
-          Spacer(),
-          Text('Selected color'),
+          const Spacer(),
+          const Text('Selected color'),
           ToggleButtons1(),
-          Spacer(),
-          Text('Remove the border'),
+          const Spacer(),
+          const Text('Remove the border'),
           ToggleButtons2(),
-          Spacer(),
-          Text('Border customization'),
+          const Spacer(),
+          const Text('Border customization'),
           ToggleButtons3(),
-          Spacer(),
-          Text('Inkwell color'),
+          const Spacer(),
+          const Text('Inkwell color'),
           ToggleButtons4(),
-          Spacer(),
-          Text('Disabled color'),
+          const Spacer(),
+          const Text('Disabled color'),
           ToggleButtons5(),
-          Spacer(),
+          const Spacer(),
         ],
       )),
     );
@@ -38,7 +38,7 @@ class ToggleButtons1 extends StatefulWidget {
 }
 
 class _ToggleButtons1State extends State<ToggleButtons1> {
-  List<bool> _selections = List.generate(3, (_) => false);
+  final _selections = List.generate(3, (_) => false);
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class _ToggleButtons1State extends State<ToggleButtons1> {
         Icon(Icons.cake),
       ],
       isSelected: _selections,
-      onPressed: (int index) {
+      onPressed: (index) {
         setState(() {
           _selections[index] = !_selections[index];
         });
@@ -67,7 +67,7 @@ class ToggleButtons2 extends StatefulWidget {
 }
 
 class _ToggleButtons2State extends State<ToggleButtons2> {
-  List<bool> _selections = List.generate(3, (_) => false);
+  final _selections = List.generate(3, (_) => false);
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +78,7 @@ class _ToggleButtons2State extends State<ToggleButtons2> {
         Icon(Icons.cake),
       ],
       isSelected: _selections,
-      onPressed: (int index) {
+      onPressed: (index) {
         setState(() {
           _selections[index] = !_selections[index];
         });
@@ -94,7 +94,7 @@ class ToggleButtons3 extends StatefulWidget {
 }
 
 class _ToggleButtons3State extends State<ToggleButtons3> {
-  List<bool> _selections = List.generate(3, (_) => false);
+  final _selections = List.generate(3, (_) => false);
 
   @override
   Widget build(BuildContext context) {
@@ -105,7 +105,7 @@ class _ToggleButtons3State extends State<ToggleButtons3> {
         Icon(Icons.cake),
       ],
       isSelected: _selections,
-      onPressed: (int index) {
+      onPressed: (index) {
         setState(() {
           _selections[index] = !_selections[index];
         });
@@ -124,7 +124,7 @@ class ToggleButtons4 extends StatefulWidget {
 }
 
 class _ToggleButtons4State extends State<ToggleButtons4> {
-  List<bool> _selections = List.generate(3, (_) => false);
+  final _selections = List.generate(3, (_) => false);
 
   @override
   Widget build(BuildContext context) {
@@ -135,7 +135,7 @@ class _ToggleButtons4State extends State<ToggleButtons4> {
         Icon(Icons.cake),
       ],
       isSelected: _selections,
-      onPressed: (int index) {
+      onPressed: (index) {
         setState(() {
           _selections[index] = !_selections[index];
         });
@@ -152,7 +152,7 @@ class ToggleButtons5 extends StatefulWidget {
 }
 
 class _ToggleButtons5State extends State<ToggleButtons5> {
-  List<bool> _selections = List.generate(3, (_) => false);
+  final _selections = List.generate(3, (_) => false);
 
   @override
   Widget build(BuildContext context) {
