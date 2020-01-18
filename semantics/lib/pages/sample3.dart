@@ -6,20 +6,20 @@ class Sample3Page extends StatefulWidget {
 }
 
 class _Sample3PageState extends State<Sample3Page> {
-  var name = 'kirin';
+  final String name = 'kirin';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample3 MergeSemantics'),
+        title: const Text('Sample3 MergeSemantics'),
       ),
       body: MergeSemantics(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Semantics(
-              child: Text('KIRIN'),
+              child: const Text('KIRIN'),
               label: 'Text',
               enabled: true,
             ),
@@ -39,9 +39,9 @@ class _Sample3PageState extends State<Sample3Page> {
 }
 
 class FaceImage extends StatelessWidget {
-  final String file;
-
   const FaceImage({Key key, this.file}) : super(key: key);
+
+  final String file;
 
   @override
   Widget build(BuildContext context) {

@@ -7,7 +7,7 @@ class Sample2Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample2 ExcludeSemantics'),
+        title: const Text('Sample2 ExcludeSemantics'),
       ),
       body: ExcludeSemantics(
         child: Semantics(
@@ -24,9 +24,9 @@ class Sample2Page extends StatelessWidget {
 }
 
 class FaceImage extends StatelessWidget {
-  final String file;
-
   const FaceImage({Key key, this.file}) : super(key: key);
+
+  final String file;
 
   @override
   Widget build(BuildContext context) {

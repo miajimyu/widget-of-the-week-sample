@@ -7,7 +7,7 @@ class Sample1Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1 Semantics'),
+        title: const Text('Sample1 Semantics'),
       ),
       body: Semantics(
         child: FaceImage(
@@ -22,9 +22,9 @@ class Sample1Page extends StatelessWidget {
 }
 
 class FaceImage extends StatelessWidget {
-  final String file;
-
   const FaceImage({Key key, this.file}) : super(key: key);
+
+  final String file;
 
   @override
   Widget build(BuildContext context) {

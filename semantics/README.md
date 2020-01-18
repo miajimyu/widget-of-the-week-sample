@@ -10,7 +10,7 @@
 
 ## Screenshots
 
-|Sample1 Semantics|Sample2 ExcludeSemantics|Sample3 MergeSemantics|
+|[Sample1 Semantics](lib/pages/sample1.dart)|[Sample2 ExcludeSemantics](lib/pages/sample2.dart)|[Sample3 MergeSemantics](lib/pages/sample3.dart)|
 |:-:|:-:|:-:|
 |<img src="./screenshots/Sample1.png" height="400" alt="Screenshot"/>|<img src="./screenshots/Sample2.png" height="400" alt="Screenshot"/>|<img src="./screenshots/Sample3.png" height="400" alt="Screenshot"/>|
 |<img src="./screenshots/Sample1_Semantics.png" height="400" alt="Screenshot"/>|<img src="./screenshots/Sample2_Semantics.png" height="400" alt="Screenshot"/>|<img src="./screenshots/Sample3_Semantics.png" height="400" alt="Screenshot"/>|
