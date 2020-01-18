@@ -5,13 +5,13 @@ class Sample1Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1'),
+        title: const Text('Sample1'),
       ),
       body: Center(
         child: RichText(
           text: TextSpan(
             style: Theme.of(context).textTheme.display1,
-            children: <TextSpan>[
+            children: const <TextSpan>[
               TextSpan(text: "It's "),
               TextSpan(
                   text: 'all', style: TextStyle(fontWeight: FontWeight.bold)),
