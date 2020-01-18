@@ -14,8 +14,8 @@ class OtherClipPage extends StatelessWidget {
             ClipOval(
               child: Container(
                 color: Colors.lightBlue,
-                width: 200.0,
-                height: 200.0,
+                width: 200,
+                height: 200,
                 child: const Center(
                   child: Text(
                     'ClipOval',
@@ -28,8 +28,8 @@ class OtherClipPage extends StatelessWidget {
               clipper: MyClipper(),
               child: Container(
                 color: Colors.blue,
-                width: 200.0,
-                height: 200.0,
+                width: 200,
+                height: 200,
                 child: const Center(
                   child: Text(
                     'ClipPath',
@@ -48,10 +48,10 @@ class OtherClipPage extends StatelessWidget {
 class MyClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
-    final Path path = Path();
-    path.lineTo(size.width, 0.0);
-    path.lineTo(size.width / 2, size.height);
-    path.close();
+    final path = Path()
+      ..lineTo(size.width, 0)
+      ..lineTo(size.width / 2, size.height)
+      ..close();
     return path;
   }
 

@@ -10,9 +10,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: <String, WidgetBuilder>{
-        '/': (BuildContext context) => MyHomePage(),
-        '/clip_r_rect': (BuildContext context) => ClipRRectPage(),
-        '/other_clip': (BuildContext context) => OtherClipPage(),
+        '/': (context) => MyHomePage(),
+        '/clip_r_rect': (context) => ClipRRectPage(),
+        '/other_clip': (context) => OtherClipPage(),
       },
     );
   }

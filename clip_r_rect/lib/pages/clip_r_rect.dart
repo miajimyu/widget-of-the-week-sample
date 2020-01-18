@@ -12,20 +12,20 @@ class ClipRRectPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             ClipRRect(
-              borderRadius: BorderRadius.circular(15.0),
+              borderRadius: BorderRadius.circular(15),
               child: Container(
                 color: Colors.blue,
-                width: 200.0,
-                height: 200.0,
+                width: 200,
+                height: 200,
               ),
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(15.0),
+              borderRadius: BorderRadius.circular(15),
               clipBehavior: Clip.hardEdge,
               child: Container(
                 color: Colors.blue,
-                width: 200.0,
-                height: 200.0,
+                width: 200,
+                height: 200,
                 child: const Center(
                   child: Text(
                     'Clip.hardEdge',
