@@ -10,6 +10,6 @@
 
 ## Screenshots
 
-|Menu|Sample1|Sample2|
-|:-:|:-:|:-:|
-|<img src="./screenshots/Menu.png" height="400" alt="Screenshot"/>|<img src="./screenshots/Sample1.png" height="400" alt="Screenshot"/>|<img src="./screenshots/Sample2.png" height="400" alt="Screenshot"/>|
+|[Sample1](lib/pages/sample1.dart)|[Sample2](lib/pages/sample2.dart)|
+|:-:|:-:|
+|<img src="./screenshots/Sample1.png" height="400" alt="Screenshot"/>|<img src="./screenshots/Sample2.png" height="400" alt="Screenshot"/>|
