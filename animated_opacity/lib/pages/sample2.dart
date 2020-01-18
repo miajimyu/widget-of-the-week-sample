@@ -45,9 +45,9 @@ class _Sample2PageState extends State<Sample2Page> {
               Text('linear'),
               Text('elasticOut'),
             ],
-            onPressed: (int index) {
+            onPressed: (index) {
               setState(() {
-                for (int i = 0; i < isSelected.length; i++) {
+                for (var i = 0; i < isSelected.length; i++) {
                   if (i == index) {
                     isSelected[i] = true;
                   } else {

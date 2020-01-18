@@ -25,7 +25,7 @@ class LogoFade extends StatefulWidget {
 }
 
 class _LogoFadeState extends State<LogoFade> {
-  double opacityLevel = 1.0;
+  double opacityLevel = 1;
 
   void _changeOpacity() {
     setState(() => opacityLevel = opacityLevel == 0 ? 1.0 : 0.0);
