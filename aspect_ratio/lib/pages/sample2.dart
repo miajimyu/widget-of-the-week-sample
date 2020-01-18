@@ -16,10 +16,10 @@ class Sample2Page extends StatelessWidget {
                 aspectRatio: 3 / 2,
                 child: Container(
                   decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
                     color: Colors.blue,
                   ),
-                  margin: const EdgeInsets.all(30.0),
+                  margin: const EdgeInsets.all(30),
                   child: Center(
                     child: Text(
                       'bottomCenter',

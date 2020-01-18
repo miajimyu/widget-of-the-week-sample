@@ -13,10 +13,10 @@ class Sample1Page extends StatelessWidget {
             aspectRatio: 3 / 2,
             child: Container(
               decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                borderRadius: BorderRadius.all(Radius.circular(10)),
                 color: Colors.blue,
               ),
-              margin: const EdgeInsets.all(50.0),
+              margin: const EdgeInsets.all(50),
               child: Center(
                 child: Text(
                   'aspectRatio: 3 / 2',
@@ -29,10 +29,10 @@ class Sample1Page extends StatelessWidget {
             aspectRatio: 1.5,
             child: Container(
               decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                borderRadius: BorderRadius.all(Radius.circular(10)),
                 color: Colors.lightBlue,
               ),
-              margin: const EdgeInsets.all(50.0),
+              margin: const EdgeInsets.all(50),
               child: Center(
                 child: Text(
                   'aspectRatio: 1.5',
