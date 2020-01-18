@@ -21,7 +21,7 @@ class _Sample1PageState extends State<Sample1Page>
     );
     animation = Tween<double>(begin: 0, end: 300).animate(controller)
       ..addStatusListener(
-        (AnimationStatus status) async {
+        (status) async {
           if (status == AnimationStatus.completed) {
             await Future<dynamic>.delayed(const Duration(milliseconds: 500));
             controller?.reverse();
@@ -31,7 +31,7 @@ class _Sample1PageState extends State<Sample1Page>
           }
         },
       )
-      ..addStatusListener((AnimationStatus state) => print('$state'));
+      ..addStatusListener((state) => print('$state'));
     controller.forward();
   }
 
