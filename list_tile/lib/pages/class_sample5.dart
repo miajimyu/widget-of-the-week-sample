@@ -5,10 +5,10 @@ class ClassSample5Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ClassSample5'),
+        title: const Text('ClassSample5'),
       ),
       body: ListView(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10),
         children: <Widget>[
           CustomListItemTwo(
             thumbnail: Container(
@@ -38,7 +38,7 @@ class ClassSample5Page extends StatelessWidget {
 }
 
 class _ArticleDescription extends StatelessWidget {
-  _ArticleDescription({
+  const _ArticleDescription({
     Key key,
     this.title,
     this.subtitle,
@@ -71,13 +71,13 @@ class _ArticleDescription extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const Padding(padding: EdgeInsets.only(bottom: 2.0)),
+              const Padding(padding: EdgeInsets.only(bottom: 2)),
               Text(
                 '$subtitle',
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
-                  fontSize: 12.0,
+                  fontSize: 12,
                   color: Colors.black54,
                 ),
               ),
@@ -93,14 +93,14 @@ class _ArticleDescription extends StatelessWidget {
               Text(
                 '$author',
                 style: const TextStyle(
-                  fontSize: 12.0,
+                  fontSize: 12,
                   color: Colors.black87,
                 ),
               ),
               Text(
                 '$publishDate · $readDuration ★',
                 style: const TextStyle(
-                  fontSize: 12.0,
+                  fontSize: 12,
                   color: Colors.black54,
                 ),
               ),
@@ -113,7 +113,7 @@ class _ArticleDescription extends StatelessWidget {
 }
 
 class CustomListItemTwo extends StatelessWidget {
-  CustomListItemTwo({
+  const CustomListItemTwo({
     Key key,
     this.thumbnail,
     this.title,
@@ -133,19 +133,19 @@ class CustomListItemTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10.0),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       child: SizedBox(
         height: 100,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             AspectRatio(
-              aspectRatio: 1.0,
+              aspectRatio: 1,
               child: thumbnail,
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.fromLTRB(20.0, 0.0, 2.0, 0.0),
+                padding: const EdgeInsets.fromLTRB(20, 0, 2, 0),
                 child: _ArticleDescription(
                   title: title,
                   subtitle: subtitle,
@@ -164,7 +164,7 @@ class CustomListItemTwo extends StatelessWidget {
 
 Widget build(BuildContext context) {
   return ListView(
-    padding: const EdgeInsets.all(10.0),
+    padding: const EdgeInsets.all(10),
     children: <Widget>[
       CustomListItemTwo(
         thumbnail: Container(

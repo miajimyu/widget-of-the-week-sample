@@ -5,11 +5,11 @@ class ClassSample4Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ClassSample4'),
+        title: const Text('ClassSample4'),
       ),
       body: ListView(
-        padding: const EdgeInsets.all(8.0),
-        itemExtent: 106.0,
+        padding: const EdgeInsets.all(8),
+        itemExtent: 106,
         children: <CustomListItem>[
           CustomListItem(
             user: 'Flutter',
@@ -49,7 +49,7 @@ class CustomListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5.0),
+      padding: const EdgeInsets.symmetric(vertical: 5),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -67,7 +67,7 @@ class CustomListItem extends StatelessWidget {
           ),
           const Icon(
             Icons.more_vert,
-            size: 16.0,
+            size: 16,
           ),
         ],
       ),
@@ -90,7 +90,7 @@ class _VideoDescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(5.0, 0.0, 0.0, 0.0),
+      padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -98,18 +98,18 @@ class _VideoDescription extends StatelessWidget {
             title,
             style: const TextStyle(
               fontWeight: FontWeight.w500,
-              fontSize: 14.0,
+              fontSize: 14,
             ),
           ),
-          const Padding(padding: EdgeInsets.symmetric(vertical: 2.0)),
+          const Padding(padding: EdgeInsets.symmetric(vertical: 2)),
           Text(
             user,
-            style: const TextStyle(fontSize: 10.0),
+            style: const TextStyle(fontSize: 10),
           ),
-          const Padding(padding: EdgeInsets.symmetric(vertical: 1.0)),
+          const Padding(padding: EdgeInsets.symmetric(vertical: 1)),
           Text(
             '$viewCount views',
-            style: const TextStyle(fontSize: 10.0),
+            style: const TextStyle(fontSize: 10),
           ),
         ],
       ),
@@ -119,8 +119,8 @@ class _VideoDescription extends StatelessWidget {
 
 Widget build(BuildContext context) {
   return ListView(
-    padding: const EdgeInsets.all(8.0),
-    itemExtent: 106.0,
+    padding: const EdgeInsets.all(8),
+    itemExtent: 106,
     children: <CustomListItem>[
       CustomListItem(
         user: 'Flutter',

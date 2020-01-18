@@ -5,7 +5,7 @@ class ClassSample3Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ClassSample3'),
+        title: const Text('ClassSample3'),
       ),
       body: ListTile(
         leading: GestureDetector(
@@ -14,12 +14,12 @@ class ClassSample3Page extends StatelessWidget {
           child: Container(
             width: 48,
             height: 48,
-            padding: EdgeInsets.symmetric(vertical: 4.0),
+            padding: const EdgeInsets.symmetric(vertical: 4),
             alignment: Alignment.center,
-            child: CircleAvatar(),
+            child: const CircleAvatar(),
           ),
         ),
-        title: Text('title'),
+        title: const Text('title'),
         dense: false,
       ),
     );

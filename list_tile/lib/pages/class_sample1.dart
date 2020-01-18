@@ -5,7 +5,7 @@ class ClassSample1Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ClassSample1'),
+        title: const Text('ClassSample1'),
       ),
       body: ListView(
         children: const <Widget>[
@@ -37,7 +37,7 @@ class ClassSample1Page extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              leading: FlutterLogo(size: 56.0),
+              leading: FlutterLogo(size: 56),
               title: Text('Two-line ListTile'),
               subtitle: Text('Here is a second line'),
               trailing: Icon(Icons.more_vert),
@@ -45,7 +45,7 @@ class ClassSample1Page extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              leading: FlutterLogo(size: 72.0),
+              leading: FlutterLogo(size: 72),
               title: Text('Three-line ListTile'),
               subtitle:
                   Text('A sufficiently long subtitle warrants three lines.'),

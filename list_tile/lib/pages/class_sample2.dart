@@ -12,7 +12,7 @@ class _ClassSample2PageState extends State<ClassSample2Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ClassSample2'),
+        title: const Text('ClassSample2'),
       ),
       body: ListView(
         children: [
