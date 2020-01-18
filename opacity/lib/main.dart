@@ -8,12 +8,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (BuildContext context) => MyHomePage(),
-        '/noopacity': (BuildContext context) => NoOpacityPage(),
-        '/opaticy': (BuildContext context) => OpacityPage(),
-        '/blending': (BuildContext context) => BlendingStacksPage(),
-        '/animatedopacity': (BuildContext context) => AnimatedOpacityPage(),
-        '/samples': (BuildContext context) => SamplesPage(),
+        '/': (context) => MyHomePage(),
+        '/noopacity': (context) => NoOpacityPage(),
+        '/opaticy': (context) => OpacityPage(),
+        '/blending': (context) => BlendingStacksPage(),
+        '/animatedopacity': (context) => AnimatedOpacityPage(),
+        '/samples': (context) => SamplesPage(),
       },
     );
   }
@@ -24,7 +24,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Opacity'),
+        title: const Text('Opacity'),
       ),
       body: SafeArea(
         child: ListView(
@@ -53,84 +53,17 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
-class NoOpacityPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final widgets = [
-      _buildMyWidget(Colors.green),
-      // _buildMyWidget(Colors.blue),
-      _buildMyWidget(Colors.yellow),
-    ];
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('No Opacity'),
-      ),
-      body: Center(
-        child: Column(
-          children: widgets,
-          mainAxisAlignment: MainAxisAlignment.center,
-        ),
-      ),
-    );
-  }
-
-  Widget _buildMyWidget(MaterialColor color) {
-    return Container(
-      color: color,
-      width: 100.0,
-      height: 100.0,
-      margin: EdgeInsets.all(10.0),
-    );
-  }
-}
-
-class OpacityPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final widgets = [
-      _buildMyWidget(Colors.green),
-      Opacity(
-        opacity: 0.0,
-        child: _buildMyWidget(Colors.blue),
-      ),
-      _buildMyWidget(Colors.yellow),
-    ];
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Opacity'),
-      ),
-      body: Center(
-        child: Column(
-          children: widgets,
-          mainAxisAlignment: MainAxisAlignment.center,
-        ),
-      ),
-    );
-  }
-
-  Widget _buildMyWidget(MaterialColor color) {
-    return Container(
-      color: color,
-      width: 100.0,
-      height: 100.0,
-      margin: EdgeInsets.all(10.0),
-    );
-  }
-}
-
 class BlendingStacksPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Blending Stacks'),
+        title: const Text('Blending Stacks'),
       ),
       body: Center(
         child: Stack(
           children: [
-            FlutterLogo(
+            const FlutterLogo(
               size: 300,
             ),
             Opacity(
@@ -145,13 +78,13 @@ class BlendingStacksPage extends StatelessWidget {
 
   Widget _buildGradientContainer() {
     return Container(
-      width: 300.0,
-      height: 300.0,
+      width: 300,
+      height: 300,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          stops: [0.1, 0.5, 0.7, 0.9],
+          stops: const [0.1, 0.5, 0.7, 0.9],
           colors: [
             Colors.indigo[900],
             Colors.indigo[600],
@@ -176,16 +109,16 @@ class _AnimatedOpacityPageState extends State<AnimatedOpacityPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AnimatedOpacity'),
+        title: const Text('AnimatedOpacity'),
       ),
       body: Center(
         child: Stack(
           children: [
-            FlutterLogo(
+            const FlutterLogo(
               size: 300,
             ),
             AnimatedOpacity(
-              duration: Duration(seconds: 1),
+              duration: const Duration(seconds: 1),
               opacity: _opacity,
               child: _buildGradientContainer(),
             ),
@@ -195,7 +128,7 @@ class _AnimatedOpacityPageState extends State<AnimatedOpacityPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            _opacity = (_opacity == 0.0 ? 0.8 : 0.0);
+            _opacity = _opacity == 0 ? 0.8 : 0;
           });
         },
         child: Icon(Icons.sync),
@@ -205,13 +138,13 @@ class _AnimatedOpacityPageState extends State<AnimatedOpacityPage> {
 
   Widget _buildGradientContainer() {
     return Container(
-      width: 300.0,
-      height: 300.0,
+      width: 300,
+      height: 300,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          stops: [0.1, 0.5, 0.7, 0.9],
+          stops: const [0.1, 0.5, 0.7, 0.9],
           colors: [
             Colors.indigo[900],
             Colors.indigo[600],
@@ -236,7 +169,7 @@ class _SamplesPageState extends State<SamplesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Samples'),
+        title: const Text('Samples'),
       ),
       body: Column(
         children: <Widget>[
@@ -265,7 +198,7 @@ class _SamplesPageState extends State<SamplesPage> {
   Widget _buildSample2() {
     return Image.network(
         'https://raw.githubusercontent.com/flutter/assets-for-api-docs/master/packages/diagrams/assets/blend_mode_destination.jpeg',
-        color: Color.fromRGBO(255, 255, 255, 0.5),
+        color: const Color.fromRGBO(255, 255, 255, 0.5),
         colorBlendMode: BlendMode.modulate);
   }
 }
