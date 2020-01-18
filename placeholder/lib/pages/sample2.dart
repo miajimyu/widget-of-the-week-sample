@@ -5,7 +5,7 @@ class Sample2Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample2'),
+        title: const Text('Sample2'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -13,9 +13,9 @@ class Sample2Page extends StatelessWidget {
           Container(
             height: 50,
             width: 300,
-            child: Placeholder(),
+            child: const Placeholder(),
           ),
-          Align(
+          const Align(
             alignment: Alignment.centerLeft,
             child: SizedBox(
               height: 300,
@@ -26,7 +26,7 @@ class Sample2Page extends StatelessWidget {
           Container(
             height: 100,
             width: 300,
-            child: Placeholder(),
+            child: const Placeholder(),
           ),
         ],
       ),
