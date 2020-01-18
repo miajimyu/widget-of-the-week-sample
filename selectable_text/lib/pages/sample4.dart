@@ -5,7 +5,7 @@ class Sample4Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample4 toolbarOptions'),
+        title: const Text('Sample4 toolbarOptions'),
       ),
       body: Center(
         child: Column(
@@ -14,12 +14,12 @@ class Sample4Page extends StatelessWidget {
             SelectableText(
               'my selectable text',
               style: Theme.of(context).textTheme.display1,
-              toolbarOptions: ToolbarOptions(copy: true),
+              toolbarOptions: const ToolbarOptions(copy: true),
             ),
             SelectableText(
               'my selectable text',
               style: Theme.of(context).textTheme.display1,
-              toolbarOptions: ToolbarOptions(),
+              toolbarOptions: const ToolbarOptions(),
             ),
           ],
         ),

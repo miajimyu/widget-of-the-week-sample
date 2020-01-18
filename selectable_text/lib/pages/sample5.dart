@@ -5,7 +5,7 @@ class Sample5Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample5 onTap'),
+        title: const Text('Sample5 onTap'),
       ),
       body: Center(
         child: SelectableText(

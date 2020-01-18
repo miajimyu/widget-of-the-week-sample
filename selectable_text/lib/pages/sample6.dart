@@ -5,9 +5,9 @@ class Sample6Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample6 SelectableText.rich()'),
+        title: const Text('Sample6 SelectableText.rich()'),
       ),
-      body: Center(
+      body: const Center(
         child: SelectableText.rich(
           TextSpan(
             text: 'Hello',

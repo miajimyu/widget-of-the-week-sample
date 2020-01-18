@@ -5,7 +5,7 @@ class Sample1Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1 color'),
+        title: const Text('Sample1 color'),
       ),
       body: Center(
         child: SelectableText(

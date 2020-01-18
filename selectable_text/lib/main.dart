@@ -6,9 +6,6 @@ import 'pages/sample3.dart';
 import 'pages/sample4.dart';
 import 'pages/sample5.dart';
 import 'pages/sample6.dart';
-// import 'pages/sample7.dart';
-// import 'pages/sample8.dart';
-// import 'pages/sample9.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,23 +15,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         textTheme: TextTheme(
-          headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-          title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
-          body1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+          headline: TextStyle(fontSize: 72, fontWeight: FontWeight.bold),
+          title: const TextStyle(fontSize: 36, fontStyle: FontStyle.italic),
+          body1: const TextStyle(fontSize: 14, fontFamily: 'Hind'),
         ),
       ),
       initialRoute: '/',
       routes: {
-        '/': (BuildContext context) => HomePage(),
-        '/sample1': (BuildContext context) => Sample1Page(),
-        '/sample2': (BuildContext context) => Sample2Page(),
-        '/sample3': (BuildContext context) => Sample3Page(),
-        '/sample4': (BuildContext context) => Sample4Page(),
-        '/sample5': (BuildContext context) => Sample5Page(),
-        '/sample6': (BuildContext context) => Sample6Page(),
-        // '/sample7': (BuildContext context) => Sample7Page(),
-        // '/sample8': (BuildContext context) => Sample8Page(),
-        // '/sample9': (BuildContext context) => Sample9Page(),
+        '/': (context) => HomePage(),
+        '/sample1': (context) => Sample1Page(),
+        '/sample2': (context) => Sample2Page(),
+        '/sample3': (context) => Sample3Page(),
+        '/sample4': (context) => Sample4Page(),
+        '/sample5': (context) => Sample5Page(),
+        '/sample6': (context) => Sample6Page(),
       },
     );
   }
@@ -45,7 +39,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('SelectableText'),
+        title: const Text('SelectableText'),
       ),
       body: SafeArea(
         child: ListView(
@@ -56,9 +50,6 @@ class HomePage extends StatelessWidget {
             _buildList(context, 'Sample4', '/sample4'),
             _buildList(context, 'Sample5', '/sample5'),
             _buildList(context, 'Sample6', '/sample6'),
-            // _buildList(context, 'Sample7', '/sample7'),
-            // _buildList(context, 'Sample8', '/sample8'),
-            // _buildList(context, 'Sample9', '/sample9'),
           ],
         ),
       ),

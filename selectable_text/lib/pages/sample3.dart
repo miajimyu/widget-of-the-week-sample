@@ -5,7 +5,7 @@ class Sample3Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample3 Width&Color&Radius'),
+        title: const Text('Sample3 Width&Color&Radius'),
       ),
       body: Center(
         child: SelectableText(
@@ -14,7 +14,7 @@ class Sample3Page extends StatelessWidget {
           showCursor: true,
           cursorWidth: 5,
           cursorColor: Colors.green,
-          cursorRadius: Radius.circular(5),
+          cursorRadius: const Radius.circular(5),
         ),
       ),
     );
