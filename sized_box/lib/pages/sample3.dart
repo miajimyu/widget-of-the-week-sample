@@ -5,7 +5,7 @@ class Sample3Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample3 SizedBox.expand()'),
+        title: const Text('Sample3 SizedBox.expand()'),
       ),
       body: Center(
         child: SizedBox.expand(

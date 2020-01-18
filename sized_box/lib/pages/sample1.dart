@@ -5,12 +5,12 @@ class Sample1Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1 (w:200, h:100)'),
+        title: const Text('Sample1 (w:200, h:100)'),
       ),
       body: Center(
         child: SizedBox(
-          width: 200.0,
-          height: 100.0,
+          width: 200,
+          height: 100,
           child: RaisedButton(
             onPressed: () {},
             child: Text(

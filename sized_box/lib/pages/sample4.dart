@@ -5,13 +5,13 @@ class Sample4Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample4 Empty SizedBox'),
+        title: const Text('Sample4 Empty SizedBox'),
       ),
       body: Center(
         child: Column(
           children: <Widget>[
             MyButton(),
-            SizedBox(height: 200),
+            const SizedBox(height: 200),
             OtherButton(),
           ],
         ),
