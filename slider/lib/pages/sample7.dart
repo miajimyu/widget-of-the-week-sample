@@ -6,12 +6,14 @@ class Sample7Page extends StatefulWidget {
 }
 
 class _Sample7PageState extends State<Sample7Page> {
-  var rating = 0.0;
+  double rating = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Sample7 Slider.adaptive()')),
+      appBar: AppBar(
+        title: const Text('Sample7 Slider.adaptive()'),
+      ),
       body: Slider.adaptive(
         value: rating,
         onChanged: (newRating) {

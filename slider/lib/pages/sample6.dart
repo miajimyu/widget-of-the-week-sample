@@ -7,12 +7,14 @@ class Sample6Page extends StatefulWidget {
 }
 
 class _Sample6PageState extends State<Sample6Page> {
-  var rating = 0.0;
+  double rating = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Sample6 CupertinoSlider')),
+      appBar: AppBar(
+        title: const Text('Sample6 CupertinoSlider'),
+      ),
       body: CupertinoSlider(
         value: rating,
         onChanged: (newRating) {

@@ -6,15 +6,17 @@ class Sample4Page extends StatefulWidget {
 }
 
 class _Sample4PageState extends State<Sample4Page> {
-  var selectedRange = RangeValues(0.2, 0.8);
+  RangeValues selectedRange = const RangeValues(0.2, 0.8);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Sample4 RangeSlider')),
+      appBar: AppBar(
+        title: const Text('Sample4 RangeSlider'),
+      ),
       body: RangeSlider(
         values: selectedRange,
-        onChanged: (RangeValues newRange) {
+        onChanged: (newRange) {
           setState(() => selectedRange = newRange);
         },
       ),

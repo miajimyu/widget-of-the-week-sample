@@ -16,14 +16,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (BuildContext context) => HomePage(),
-        '/sample1': (BuildContext context) => Sample1Page(),
-        '/sample2': (BuildContext context) => Sample2Page(),
-        '/sample3': (BuildContext context) => Sample3Page(),
-        '/sample4': (BuildContext context) => Sample4Page(),
-        '/sample5': (BuildContext context) => Sample5Page(),
-        '/sample6': (BuildContext context) => Sample6Page(),
-        '/sample7': (BuildContext context) => Sample7Page(),
+        '/': (context) => HomePage(),
+        '/sample1': (context) => Sample1Page(),
+        '/sample2': (context) => Sample2Page(),
+        '/sample3': (context) => Sample3Page(),
+        '/sample4': (context) => Sample4Page(),
+        '/sample5': (context) => Sample5Page(),
+        '/sample6': (context) => Sample6Page(),
+        '/sample7': (context) => Sample7Page(),
       },
     );
   }
@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Slider, RangeSlider, CupertinoSlider'),
+        title: const Text('Slider, RangeSlider, CupertinoSlider'),
       ),
       body: SafeArea(
         child: ListView(

@@ -6,19 +6,21 @@ class Sample3Page extends StatefulWidget {
 }
 
 class _Sample3PageState extends State<Sample3Page> {
-  var rating = 0.0;
+  double rating = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Sample3 divisions & label')),
+      appBar: AppBar(
+        title: const Text('Sample3 divisions & label'),
+      ),
       body: Slider(
         value: rating,
         onChanged: (newRating) {
           setState(() => rating = newRating);
         },
         divisions: 4,
-        label: "$rating",
+        label: '$rating',
       ),
     );
   }
