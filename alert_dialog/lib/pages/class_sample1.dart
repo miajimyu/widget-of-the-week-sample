@@ -8,7 +8,7 @@ class ClassSample1Page extends StatelessWidget {
       return showDialog<void>(
         context: context,
         barrierDismissible: false, // user must tap button!
-        builder: (BuildContext context) {
+        builder: (context) {
           return AlertDialog(
             title: const Text('Rewind and remember'),
             content: SingleChildScrollView(
@@ -39,7 +39,7 @@ class ClassSample1Page extends StatelessWidget {
       body: Center(
         child: RaisedButton(
           child: const Text('AlertDialog'),
-          onPressed: () => _neverSatisfied(),
+          onPressed: _neverSatisfied,
         ),
       ),
     );

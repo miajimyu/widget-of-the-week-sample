@@ -14,7 +14,7 @@ class Sample5Page extends StatelessWidget {
           FlatButton(child: const Text('No'), onPressed: () {}),
           FlatButton(child: const Text('Yes'), onPressed: () {}),
         ],
-        elevation: 24.0,
+        elevation: 24,
         backgroundColor: Colors.amber,
         shape: const StadiumBorder(),
       ),
