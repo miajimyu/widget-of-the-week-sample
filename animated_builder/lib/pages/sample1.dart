@@ -40,14 +40,13 @@ class _AnimatedWidgetState extends State<AnimatedWidget>
 
   @override
   Widget build(BuildContext context) {
-    final Animation<double> animation =
-        Tween<double>(begin: 0, end: 2 * pi).animate(controller);
+    final animation = Tween<double>(begin: 0, end: 2 * pi).animate(controller);
     return AnimatedBuilder(
       animation: animation,
       child: const FlutterLogo(
         size: 100,
       ),
-      builder: (BuildContext context, Widget child) {
+      builder: (context, child) {
         return Transform.rotate(
           angle: animation.value,
           child: child,
