@@ -5,17 +5,17 @@ class Sample3Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample3 (flex: 1, 3, 9)'),
+        title: const Text('Sample3 (flex: 1, 3, 9)'),
       ),
       body: Center(
         child: Row(
           children: <Widget>[
             ColorBox(),
-            Spacer(),
+            const Spacer(),
             ColorBox(),
-            Spacer(flex: 3),
+            const Spacer(flex: 3),
             ColorBox(),
-            Spacer(flex: 9),
+            const Spacer(flex: 9),
             ColorBox(),
           ],
         ),
@@ -28,9 +28,9 @@ class ColorBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(
-          Radius.circular(5.0),
+          Radius.circular(5),
         ),
         color: Colors.blue,
       ),
