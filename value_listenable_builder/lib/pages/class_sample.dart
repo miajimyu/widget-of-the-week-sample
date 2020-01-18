@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  const MyHomePage({Key key, this.title}) : super(key: key);
+
   final String title;
 
   @override
@@ -19,9 +20,9 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('You have pushed the button this many times:'),
+            const Text('You have pushed the button this many times:'),
             ValueListenableBuilder(
-              builder: (BuildContext context, int value, Widget child) {
+              builder: (context, dynamic value, child) {
                 // This builder will only get called when the _counter
                 // is updated.
                 return Row(

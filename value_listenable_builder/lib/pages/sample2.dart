@@ -12,14 +12,14 @@ class _Sample2PageState extends State<Sample2Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample2'),
+        title: const Text('Sample2'),
       ),
       body: Center(
         child: Column(
           children: <Widget>[
             ValueListenableBuilder(
               valueListenable: value,
-              builder: (context, value, _) {
+              builder: (context, dynamic value, _) {
                 return Text(
                   '$value',
                   style: Theme.of(context).textTheme.display1,
@@ -27,7 +27,7 @@ class _Sample2PageState extends State<Sample2Page> {
               },
             ),
             TextFormField(
-              onFieldSubmitted: (String string) {
+              onFieldSubmitted: (string) {
                 value.value = 'Hello, $string';
               },
             ),

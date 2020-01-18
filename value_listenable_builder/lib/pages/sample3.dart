@@ -6,13 +6,13 @@ class Sample3Page extends StatefulWidget {
 }
 
 class _Sample3PageState extends State<Sample3Page> {
-  var myNotifier = MyNotifier(MyDataClass(myInt: 1));
+  MyNotifier myNotifier = MyNotifier(MyDataClass(myInt: 1));
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample3 ValueNotifier'),
+        title: const Text('Sample3 ValueNotifier'),
       ),
       body: Center(
         child: ValueListenableBuilder(
@@ -22,7 +22,7 @@ class _Sample3PageState extends State<Sample3Page> {
             height: 100,
             color: Colors.green,
           ),
-          builder: (context, value, _) {
+          builder: (context, dynamic value, _) {
             return Text(
               '${value.myInt}',
               style: Theme.of(context).textTheme.display1,
@@ -41,8 +41,9 @@ class _Sample3PageState extends State<Sample3Page> {
 }
 
 class MyDataClass {
-  int myInt;
   MyDataClass({@required this.myInt});
+
+  int myInt;
 }
 
 class MyNotifier extends ValueNotifier<MyDataClass> {

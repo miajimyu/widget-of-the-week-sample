@@ -26,7 +26,7 @@ class _Sample4PageState extends State<Sample4Page>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample4 Animation'),
+        title: const Text('Sample4 Animation'),
       ),
       body: Center(
         child: ValueListenableBuilder(
@@ -36,7 +36,7 @@ class _Sample4PageState extends State<Sample4Page>
             height: 100,
             color: Colors.green,
           ),
-          builder: (context, value, child) {
+          builder: (context, dynamic count, child) {
             return Transform.rotate(
               angle: myAnimation.value.value * 2.0 * math.pi,
               child: child,

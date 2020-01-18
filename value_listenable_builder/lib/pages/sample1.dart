@@ -7,14 +7,14 @@ class Sample1Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample1'),
+        title: const Text('Sample1'),
       ),
       body: Center(
         child: ValueListenableBuilder(
           valueListenable: value,
-          builder: (context, value, _) {
+          builder: (context, dynamic value, _) {
             return Text(
-              'Value is $value',
+              'Value is ${value.toString()}',
               style: Theme.of(context).textTheme.display1,
             );
           },
