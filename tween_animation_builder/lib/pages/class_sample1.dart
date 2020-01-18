@@ -6,7 +6,7 @@ class ClassSample1Page extends StatefulWidget {
 }
 
 class _ClassSample1PageState extends State<ClassSample1Page> {
-  double targetValue = 24.0;
+  double targetValue = 24;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class _ClassSample1PageState extends State<ClassSample1Page> {
         child: TweenAnimationBuilder<double>(
           tween: Tween<double>(begin: 0, end: targetValue),
           duration: const Duration(seconds: 1),
-          builder: (BuildContext context, double size, Widget child) {
+          builder: (context, size, child) {
             return IconButton(
               iconSize: size,
               color: Colors.blue,

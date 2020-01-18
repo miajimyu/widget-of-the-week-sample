@@ -15,7 +15,7 @@ class Sample2Page extends StatelessWidget {
             end: Colors.orange,
           ),
           curve: Curves.bounceInOut,
-          builder: (BuildContext _, Color value, Widget __) {
+          builder: (_, value, __) {
             return ColorFiltered(
               child: const FlutterLogo(size: 300),
               colorFilter: ColorFilter.mode(value, BlendMode.modulate),

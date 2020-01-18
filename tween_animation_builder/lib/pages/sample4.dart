@@ -15,7 +15,7 @@ class Sample4Page extends StatelessWidget {
             end: Colors.orange,
           ),
           child: const FlutterLogo(size: 300),
-          builder: (BuildContext _, Color value, Widget child) {
+          builder: (_, value, child) {
             return ColorFiltered(
               child: child,
               colorFilter: ColorFilter.mode(value, BlendMode.modulate),
