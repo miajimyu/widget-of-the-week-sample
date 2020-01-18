@@ -19,7 +19,7 @@ class Sample3Page extends StatelessWidget {
     );
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample3 (reverse = true)'),
+        title: const Text('Sample3 (reverse = true)'),
       ),
       body: pageView,
     );

@@ -19,7 +19,7 @@ class Sample4Page extends StatelessWidget {
     );
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample4 (pageSnapping = false)'),
+        title: const Text('Sample4 (pageSnapping = false)'),
       ),
       body: pageView,
     );

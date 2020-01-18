@@ -18,7 +18,7 @@ class Sample1Page extends StatelessWidget {
     );
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sapme1'),
+        title: const Text('Sapme1'),
       ),
       body: pageView,
     );

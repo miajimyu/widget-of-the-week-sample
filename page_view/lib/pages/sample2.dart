@@ -19,7 +19,7 @@ class Sample2Page extends StatelessWidget {
     );
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample2 (scrollDirection = vertical)'),
+        title: const Text('Sample2 (scrollDirection = vertical)'),
       ),
       body: pageView,
     );
