@@ -18,13 +18,13 @@ class Sample3Page extends StatelessWidget {
               // <-- clips to the 200x200 [Container] below
               child: BackdropFilter(
                 filter: ImageFilter.blur(
-                  sigmaX: 5.0,
-                  sigmaY: 5.0,
+                  sigmaX: 5,
+                  sigmaY: 5,
                 ),
                 child: Container(
                   alignment: Alignment.center,
-                  width: 200.0,
-                  height: 200.0,
+                  width: 200,
+                  height: 200,
                   child: const Text('Hello World'),
                 ),
               ),
