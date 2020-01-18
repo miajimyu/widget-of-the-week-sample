@@ -5,18 +5,18 @@ import 'package:web_socket_channel/web_socket_channel.dart';
 // https://flutter.dev/docs/cookbook/networking/web-sockets
 
 class WebSocketPage extends StatefulWidget {
+  const WebSocketPage({Key key, @required this.title, @required this.channel})
+      : super(key: key);
+
   final String title;
   final WebSocketChannel channel;
-
-  WebSocketPage({Key key, @required this.title, @required this.channel})
-      : super(key: key);
 
   @override
   _WebSocketPageState createState() => _WebSocketPageState();
 }
 
 class _WebSocketPageState extends State<WebSocketPage> {
-  TextEditingController _controller = TextEditingController();
+  final _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -25,21 +25,21 @@ class _WebSocketPageState extends State<WebSocketPage> {
         title: Text(widget.title),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Form(
               child: TextFormField(
                 controller: _controller,
-                decoration: InputDecoration(labelText: 'Send a message'),
+                decoration: const InputDecoration(labelText: 'Send a message'),
               ),
             ),
-            StreamBuilder(
+            StreamBuilder<dynamic>(
               stream: widget.channel.stream,
               builder: (context, snapshot) {
                 return Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 24.0),
+                  padding: const EdgeInsets.symmetric(vertical: 24),
                   child: Text(snapshot.hasData ? '${snapshot.data}' : ''),
                 );
               },

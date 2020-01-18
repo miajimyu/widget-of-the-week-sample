@@ -13,8 +13,7 @@ class _CountPageState extends State<CountPage> {
 
   @override
   void initState() {
-    _events = StreamController<int>();
-    _events.add(0);
+    _events = StreamController<int>()..add(0);
     super.initState();
   }
 
@@ -22,11 +21,11 @@ class _CountPageState extends State<CountPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Count'),
+        title: const Text('Count'),
       ),
       body: StreamBuilder(
         stream: _events.stream,
-        builder: (BuildContext context, snapshot) {
+        builder: (context, snapshot) {
           return Center(
             child: Text(
               snapshot.data.toString(),

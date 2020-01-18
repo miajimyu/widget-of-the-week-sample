@@ -12,13 +12,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (BuildContext context) => MyHomePage(),
-        '/websocket': (BuildContext context) => WebSocketPage(
+        '/': (context) => MyHomePage(),
+        '/websocket': (context) => WebSocketPage(
               title: 'WebSocket Demo',
               channel: IOWebSocketChannel.connect('ws://echo.websocket.org'),
             ),
-        '/count': (BuildContext context) => CountPage(),
-        '/http': (BuildContext context) => HttpResponsePage(),
+        '/count': (context) => CountPage(),
+        '/http': (context) => HttpResponsePage(),
       },
     );
   }
@@ -29,7 +29,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('StreamBuilder'),
+        title: const Text('StreamBuilder'),
       ),
       body: SafeArea(
         child: ListView(

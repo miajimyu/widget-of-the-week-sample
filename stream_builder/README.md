@@ -10,11 +10,6 @@
 
 ## Screenshots
 
-|Menu|
-|-|
-|<img src="./screenshots/Menu.png" height="400" alt="Screenshot"/>|
-
-
-|WebSocket Demo|Count|HttpResponse|
-|-|-|-|
+|[WebSocket Demo](lib/pages/work_with_websocket.dart)|[Count](lib/pages/count.dart)|[HttpResponse](lib/pages/http_response.dart)|
+|:-:|:-:|:-:|
 <img src="./screenshots/gif/WebSocketDemo.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/Count.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/HttpResponse.gif" height="400" alt="Screenshot"/>|
