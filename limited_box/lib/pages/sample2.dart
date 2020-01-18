@@ -5,7 +5,7 @@ class Sample2Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Container (With LimitedBox)'),
+        title: const Text('Container (With LimitedBox)'),
       ),
       body: Center(
         child: Container(

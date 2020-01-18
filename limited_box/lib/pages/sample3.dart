@@ -1,12 +1,13 @@
-import 'package:flutter/material.dart';
 import 'dart:math' as math;
+
+import 'package:flutter/material.dart';
 
 class Sample3Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ListView (Without LimitedBox)'),
+        title: const Text('ListView (Without LimitedBox)'),
       ),
       body: ListView(
         children: [
@@ -21,6 +22,6 @@ class Sample3Page extends StatelessWidget {
 
   Color randomColor() {
     return Color((math.Random().nextDouble() * 0xFFFFFF).toInt() << 0)
-        .withOpacity(1.0);
+        .withOpacity(1);
   }
 }
