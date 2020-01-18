@@ -20,8 +20,8 @@ class _AnimateColorPageState extends State<AnimateColorPage> {
           color: _color,
           duration: _myDuration,
           child: Container(
-            height: 200.0,
-            width: 200.0,
+            height: 200,
+            width: 200,
           ),
         ),
       ),

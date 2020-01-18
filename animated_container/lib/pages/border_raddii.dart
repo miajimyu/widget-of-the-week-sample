@@ -6,7 +6,7 @@ class AnimateBorderRadiiPage extends StatefulWidget {
 }
 
 class _AnimateBorderRadiiPageState extends State<AnimateBorderRadiiPage> {
-  double _borderRadii = 0.0;
+  double _borderRadii = 0;
   final Duration _myDuration = const Duration(milliseconds: 200);
 
   @override
@@ -19,15 +19,15 @@ class _AnimateBorderRadiiPageState extends State<AnimateBorderRadiiPage> {
         child: AnimatedContainer(
           decoration: BoxDecoration(
             border: Border.all(
-              width: 1.0,
+              width: 1,
               color: Colors.black,
             ),
             borderRadius: BorderRadius.all(Radius.circular(_borderRadii)),
             color: const Color(0xFF00BB00),
           ),
           duration: _myDuration,
-          height: 200.0,
-          width: 200.0,
+          height: 200,
+          width: 200,
         ),
       ),
       floatingActionButton: FloatingActionButton(

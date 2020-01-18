@@ -6,7 +6,7 @@ class AnimateBorderPage extends StatefulWidget {
 }
 
 class _AnimateBorderPageState extends State<AnimateBorderPage> {
-  double _border = 1.0;
+  double _border = 1;
   final Duration _myDuration = const Duration(milliseconds: 500);
 
   @override
@@ -25,8 +25,8 @@ class _AnimateBorderPageState extends State<AnimateBorderPage> {
             color: const Color(0xFF00BB00),
           ),
           duration: _myDuration,
-          height: 200.0,
-          width: 200.0,
+          height: 200,
+          width: 200,
         ),
       ),
       floatingActionButton: FloatingActionButton(

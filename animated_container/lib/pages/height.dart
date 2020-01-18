@@ -6,7 +6,7 @@ class AnimateHeightPage extends StatefulWidget {
 }
 
 class _AnimateHeightPageState extends State<AnimateHeightPage> {
-  double _height = 100.0;
+  double _height = 100;
   final Duration _myDuration = const Duration(milliseconds: 200);
 
   @override
@@ -27,7 +27,7 @@ class _AnimateHeightPageState extends State<AnimateHeightPage> {
                 style: const TextStyle(fontSize: 30),
               ),
             ),
-            width: 300.0,
+            width: 300,
           ),
         ),
       ),

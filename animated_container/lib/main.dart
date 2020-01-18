@@ -14,12 +14,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: <String, WidgetBuilder>{
-        '/': (BuildContext context) => MyHomePage(),
-        '/height': (BuildContext context) => AnimateHeightPage(),
-        '/color': (BuildContext context) => AnimateColorPage(),
-        '/border': (BuildContext context) => AnimateBorderPage(),
-        '/borderradii': (BuildContext context) => AnimateBorderRadiiPage(),
-        '/sine_curve': (BuildContext context) => SineCurveAnimation(),
+        '/': (context) => MyHomePage(),
+        '/height': (context) => AnimateHeightPage(),
+        '/color': (context) => AnimateColorPage(),
+        '/border': (context) => AnimateBorderPage(),
+        '/borderradii': (context) => AnimateBorderRadiiPage(),
+        '/sine_curve': (context) => SineCurveAnimation(),
       },
     );
   }
