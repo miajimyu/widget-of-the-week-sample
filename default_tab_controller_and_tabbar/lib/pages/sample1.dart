@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Sample1Page extends StatelessWidget {
   @override
@@ -12,28 +13,28 @@ class Sample1Page extends StatelessWidget {
             tabs: <Widget>[
               Tab(text: 'Cat'),
               Tab(text: 'Dog'),
-              Tab(text: 'Rabbit'),
+              Tab(text: 'Fish'),
             ],
           ),
         ),
         body: const TabBarView(
           children: <Widget>[
             Center(
-              child: Text(
-                'cat',
-                style: TextStyle(fontSize: 36),
+              child: Icon(
+                FontAwesomeIcons.cat,
+                size: 100,
               ),
             ),
             Center(
-              child: Text(
-                'dog',
-                style: TextStyle(fontSize: 36),
+              child: Icon(
+                FontAwesomeIcons.dog,
+                size: 100,
               ),
             ),
             Center(
-              child: Text(
-                'rabbit',
-                style: TextStyle(fontSize: 36),
+              child: Icon(
+                FontAwesomeIcons.fish,
+                size: 100,
               ),
             ),
           ],
