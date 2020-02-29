@@ -18,7 +18,7 @@ class ClassSample1Page extends StatelessWidget {
         shaderCallback: (Rect bounds) {
           return RadialGradient(
             center: Alignment.topLeft,
-            radius: 1.0,
+            radius: 1,
             colors: <Color>[Colors.yellow, Colors.deepOrange.shade900],
             tileMode: TileMode.mirror,
           ).createShader(bounds);
