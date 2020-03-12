@@ -11,25 +11,23 @@ class Sample1Page extends StatelessWidget {
         title: const Text(title),
       ),
       body: Center(
-        child: Builder(
-          builder: (context) => RaisedButton(
-            child: const Text('Show a SnackBar'),
-            onPressed: () {
-              Scaffold.of(context).showSnackBar(
-                SnackBar(
-                  content: Row(
-                    children: const <Widget>[
-                      Icon(Icons.thumb_up),
-                      SizedBox(width: 20),
-                      Expanded(
-                        child: Text('Hello!'),
-                      ),
-                    ],
-                  ),
+        child: RaisedButton(
+          child: const Text('Show a SnackBar'),
+          onPressed: () {
+            Scaffold.of(context).showSnackBar(
+              SnackBar(
+                content: Row(
+                  children: const <Widget>[
+                    Icon(Icons.thumb_up),
+                    SizedBox(width: 20),
+                    Expanded(
+                      child: Text('Hello!'),
+                    ),
+                  ],
                 ),
-              );
-            },
-          ),
+              ),
+            );
+          },
         ),
       ),
     );
