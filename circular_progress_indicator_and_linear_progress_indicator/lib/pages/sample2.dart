@@ -30,8 +30,8 @@ class _Sample2PageState extends State<Sample2Page> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
-          isInProgress ? CircularProgressIndicator() : Container(),
-          isInProgress ? LinearProgressIndicator() : Container(),
+          isInProgress ? const CircularProgressIndicator() : Container(),
+          isInProgress ? const LinearProgressIndicator() : Container(),
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -42,7 +42,7 @@ class _Sample2PageState extends State<Sample2Page> {
           });
           _timer?.cancel();
           _timer = Timer.periodic(
-            Duration(seconds: 2),
+            const Duration(seconds: 2),
             (timer) => setState(() {
               isInProgress = false;
             }),

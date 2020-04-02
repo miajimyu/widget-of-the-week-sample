@@ -12,7 +12,7 @@ class Sample1Page extends StatelessWidget {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
+        children: const <Widget>[
           CircularProgressIndicator(),
           LinearProgressIndicator(),
         ],

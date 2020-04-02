@@ -18,7 +18,7 @@ class _Sample7PageState extends State<Sample7Page> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
+          children: const <Widget>[
             Spacer(),
             CircularProgressIndicator(),
             SizedBox(height: 10),

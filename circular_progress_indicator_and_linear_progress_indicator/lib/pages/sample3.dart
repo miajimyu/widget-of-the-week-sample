@@ -42,7 +42,7 @@ class _Sample3PageState extends State<Sample3Page> {
           });
           _timer?.cancel();
           _timer = Timer.periodic(
-            Duration(milliseconds: 20),
+            const Duration(milliseconds: 20),
             (timer) {
               setState(() {
                 progress += 0.01;
