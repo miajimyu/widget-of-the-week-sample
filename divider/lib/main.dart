@@ -4,9 +4,6 @@ import 'pages/sample1.dart';
 import 'pages/sample2.dart';
 import 'pages/sample3.dart';
 import 'pages/sample4.dart';
-// import 'pages/sample5.dart';
-// import 'pages/sample6.dart';
-// import 'pages/sample7.dart';
 
 void main() => runApp(MyApp());
 
@@ -30,9 +27,6 @@ class MyApp extends StatelessWidget {
         Sample2Page.id: (context) => Sample2Page(),
         Sample3Page.id: (context) => Sample3Page(),
         Sample4Page.id: (context) => Sample4Page(),
-        // // Sample5Page.id: (context) => Sample5Page(),
-        // // Sample6Page.id: (context) => Sample6Page(),
-        // // Sample7Page.id: (context) => Sample7Page(),
       },
     );
   }
@@ -55,9 +49,6 @@ class HomePage extends StatelessWidget {
             _buildList(context, Sample2Page.title, Sample2Page.id),
             _buildList(context, Sample3Page.title, Sample3Page.id),
             _buildList(context, Sample4Page.title, Sample4Page.id),
-            // // _buildList(context, Sample5Page.title, Sample5Page.id),
-            // // _buildList(context, Sample6Page.title, Sample6Page.id),
-            // // _buildList(context, Sample7Page.title, Sample7Page.id),
           ],
         ),
       ),
