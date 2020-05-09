@@ -1,0 +1,13 @@
+# Padding
+
+## Docs
+
+[Padding class](https://api.flutter.dev/flutter/widgets/Padding-class.html)
+
+[DartPad](https://dartpad.dartlang.org/8f4870b99659769303f31d3036fea79a)
+
+## Screenshots
+
+|[Sample1](lib/pages/sample1.dart)|[Sample2](lib/pages/sample2.dart)|[Sample3](lib/pages/sample3.dart)|
+|:-:|:-:|:-:|
+|<img src="./screenshots/sample1.png" height="400" alt="Screenshot"/>|<img src="./screenshots/sample2.png" height="400" alt="Screenshot"/>|<img src="./screenshots/sample3.png" height="400" alt="Screenshot"/>|
