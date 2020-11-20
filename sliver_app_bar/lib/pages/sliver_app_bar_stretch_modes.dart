@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
 
-class SliverAppBarSnapPage extends StatelessWidget {
+class SliverAppBarStretchModesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    const _expandedImage = FlutterLogo();
+
     return Scaffold(
       body: CustomScrollView(
         slivers: <Widget>[
           const SliverAppBar(
-            snap: true,
-            // The property snap can only be set to true,
-            // if floating is also true.
-            floating: true,
+            title: Text('SliverAppBar StretchModes'),
             expandedHeight: 200,
-            title: Text('SliverAppBar Snap & Floating'),
+            stretch: true,
+            flexibleSpace: FlexibleSpaceBar(
+              title: Text('zoom & blur & fade title'), // Point to check
+              background: _expandedImage,
+              stretchModes: <StretchMode>[
+                StretchMode.zoomBackground, // Point to check
+                StretchMode.blurBackground, // Point to check
+                StretchMode.fadeTitle, // Point to check
+              ],
+            ),
           ),
           SliverList(
             delegate: SliverChildListDelegate(

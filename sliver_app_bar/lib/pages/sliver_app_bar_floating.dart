@@ -17,7 +17,7 @@ class SliverAppBarFloatingPage extends StatelessWidget {
                 for (var i = 0; i < 6; i++)
                   Container(
                     height: 150,
-                    color: i % 2 == 0 ? Colors.white : Colors.grey[300],
+                    color: i.isEven ? Colors.white : Colors.grey[300],
                     child: Center(
                       child: Text('$i', style: const TextStyle(fontSize: 50)),
                     ),

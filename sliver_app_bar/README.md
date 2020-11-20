@@ -20,3 +20,7 @@
 |[Sample (SliverAppBar class)](lib/pages/sliver_app_bar_class_sample1.dart)|[Sample (CustomScrollView)](lib/pages/custom_scroll_view_class_sample1.dart)|
 |:-:|:-:|
 |<img src="./screenshots/Sample1.png" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/Sample2.gif" height="400" alt="Screenshot"/>|
+
+|[Stretch](lib/pages/sliver_app_bar_stretch.dart)|[StretchModes](lib/pages/sliver_app_bar_stretch_modes.dart)|[OnStretchTrigger](lib/pages/sliver_app_bar_on_stretch_trigger.dart)|
+|:-:|:-:|:-:|
+|<img src="./screenshots/gif/Stretch.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/StretchModes.gif" height="400" alt="Screenshot"/>|<img src="./screenshots/gif/OnStretchTrigger.gif" height="400" alt="Screenshot"/>|
