@@ -34,6 +34,7 @@ class _Sample5PageState extends State<Sample5Page> {
             extent += 100;
           });
         },
+        child: const Icon(Icons.autorenew),
       ),
     );
   }
