@@ -52,8 +52,8 @@ class _Sample1PageState extends State<Sample1Page> {
             },
           ),
           SwitchListTile(
-            title: const Text('controlAffinity leading'), // Point to Check
-            controlAffinity: ListTileControlAffinity.leading,
+            title: const Text('controlAffinity leading'),
+            controlAffinity: ListTileControlAffinity.leading, // Point to Check
             value: _toggled4,
             onChanged: (value) {
               setState(() => _toggled4 = value);
@@ -65,12 +65,15 @@ class _Sample1PageState extends State<Sample1Page> {
             onChanged: (value) {
               setState(() => _toggled5 = value);
             },
-            activeThumbImage:
-                _toggled5 ? const AssetImage('images/Icon_circle.png') : null,
+            activeThumbImage: _toggled5
+                ? const AssetImage('images/Icon_circle.png')
+                : null, // Point to Check
           ),
           SwitchListTile(
             title: const Text('activeColor'),
-            activeColor: _toggled6 ? Colors.red : Theme.of(context).accentColor,
+            activeColor: _toggled6
+                ? Colors.red
+                : Theme.of(context).accentColor, // Point to Check
             value: _toggled6,
             onChanged: (value) {
               setState(() => _toggled6 = value);
@@ -78,8 +81,9 @@ class _Sample1PageState extends State<Sample1Page> {
           ),
           SwitchListTile(
             title: const Text('activeTrackColor'),
-            activeTrackColor:
-                _toggled7 ? Colors.red : Theme.of(context).accentColor,
+            activeTrackColor: _toggled7
+                ? Colors.red
+                : Theme.of(context).accentColor, // Point to Check
             value: _toggled7,
             onChanged: (value) {
               setState(() => _toggled7 = value);
@@ -87,7 +91,7 @@ class _Sample1PageState extends State<Sample1Page> {
           ),
           SwitchListTile(
             title: const Text('inactiveThumbColor'),
-            inactiveThumbColor: Colors.black,
+            inactiveThumbColor: Colors.black, // Point to Check
             value: _toggled8,
             onChanged: (value) {
               setState(() => _toggled8 = value);
