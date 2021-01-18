@@ -30,6 +30,7 @@ class _Sample1PageState extends State<Sample1Page> {
         children: [
           SwitchListTile(
             title: const Text('SwitchListTile'),
+            secondary: const FlutterLogo(),
             value: _toggled1,
             onChanged: (value) {
               setState(() => _toggled1 = value);
